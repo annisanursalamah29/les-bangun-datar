@@ -1,0 +1,604 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: ;
+}
+/* menu untama */
+.menuutama{
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 95vh;
+}
+
+.sub{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submenu {
+  border: none;
+  background-color: wheat;
+  margin-top: 14px;
+  padding: 4px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.submenu:hover {
+  background: burlywood;
+}
+
+/* bar */
+.bar {
+  display: grid;
+  top: 0;
+  z-index: 1;
+  height: 8px;
+  animation: mybar 15s infinite;
+  animation-play-state: paused;
+  width: 100%;
+  position: fixed;
+}
+
+@keyframes mybar {
+  from {
+    left: -100%;
+    background-color: blue;
+  }
+  to {
+    left: 0%;
+    background-color: red;
+  }
+}
+
+/* mtk */
+.mtk {
+  position: ;
+  margin-top: ;
+  display: none;
+}
+
+/* menu Back */
+.uback{
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+}
+
+.back:hover {
+  background-color: red;
+  color: white;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 1);
+
+}
+
+/* Bangun Datar */
+.kolom1datar, 
+.kolom2datar{
+  margin-top: 30px;
+}
+
+.kolom1datar{
+  background-color: ;
+  width: 70%;
+  height: 70vh;
+  position: absolute;
+}
+
+.kolom2datar{
+  background-color: darkred;
+  width: 30%;
+  position: absolute;
+}
+
+.menu1datar {
+  text-align: center;
+  height: 62vh;
+  width: 30%;
+  position: fixed;
+  left: 75%;
+}
+
+.ubackdatar{
+  position: fixed;
+  left: 90%;
+  margin-top: 15vh;
+}
+
+.btn1datar {
+  border: 3px solid saddlebrown;
+  background-color: white;
+  color: saddlebrown;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 12px;
+}
+
+.btn1datar:hover {
+  background: saddlebrown;
+  color: white;
+}
+
+.menu2datar {
+  text-align: center;
+  height: 23vh;
+  width: 100%; 
+  position: fixed;
+  margin-top: ;
+  left: 85%;
+}
+
+.offdatar {
+  margin-right: 20px;
+  color: red;
+  font-size: 50px;
+  display: none;
+}
+
+.tombol2 {position: absolute;}
+
+.btn2datar {
+  width: 85px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 12px;
+  background-color: white;
+  font-size: 20px;
+  cursor: pointer;
+  float: left;
+  display: none;
+}
+
+.btn2datar:hover {
+  background: black;
+}
+
+.kolomdatar{
+  display: none;
+  position: absolute;
+}
+
+p {
+  font-size: 45px;
+  text-align: center;
+  margin: 0px auto ;
+}
+
+.persegi, 
+.bujur,
+.tsisi,
+.tsiku,
+.tkaki,
+.lingkar {
+  position: absolute;
+}
+
+.persegi {
+  width: 100%;
+  height: 70%;
+  background-color: darkcyan;
+  margin: auto 15px;
+  position: absolute;
+  display: none;
+}
+
+h5{
+  text-align: center;
+}
+
+.p, 
+.l, 
+.teks1datar, 
+.teks2datar,
+.s,
+.ss,
+.sk,
+.al,
+.t,
+.a,
+.b{
+  font-size: 85px;
+}
+
+.p {
+  color: blue;
+  margin-top: -10%;
+  margin-left: 350px;
+}
+
+.l {
+  color: yellow;
+  margin-top: -20%;
+}
+
+.bujur {
+  width: 10cm;
+  height: 10cm;
+  background-color: darkred;
+  margin: auto 40%;
+  position: absolute;
+  display: none;
+}
+
+.s {
+  color: yellow;
+  padding-left: 15px;
+  margin-top: 20px;
+}
+
+.tsisi {
+  height:0px;
+  width:0px;
+  border-bottom:solid 110px blue;
+  border-left:solid 90px transparent;
+  border-right:solid 90px transparent;
+  opacity: 0;
+  margin-left: 35px;
+}
+
+.ss{
+  color: lightgoldenrodyellow;
+  padding-left: 18px;
+  margin-top: 30px;
+}
+
+.tsiku{
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(to bottom right, #fff 0%, #fff 50%, green 50%, green 100%);
+  opacity: 0;
+  margin-left: 45px;
+}
+
+.t {
+  color: wheat;
+  padding-left: 90px;
+}
+
+.al{
+  color: wheat;
+  margin-top: -40px;
+  margin-left: 50px;
+}
+
+.tkaki {
+  height: 0px;
+  width: 0px;
+  border-bottom: solid 110px purple;
+  border-left: solid 60px transparent;
+  border-right: solid 60px transparent;
+  opacity: 0;
+  margin-left: 45px;
+}
+
+.a{
+  color: wheat;
+  padding-left: 10px;
+}
+
+.b{
+  margin-top: -35px;
+  color: gainsboro;
+  margin-left: -10px;
+}
+
+.lingkar {
+  width: 3cm;
+  height: 3cm;
+  background-color: deeppink;
+  border-radius: 50%;
+  opacity: 0;
+  margin-left: 55px;
+}
+
+.r{
+  color: wheat;
+  margin-top: 30px;
+  margin-left: -50px;
+}
+
+
+h6.ketluas,
+h6.ketkeliling {
+  color: darkred;
+  opacity: 0;
+}
+
+.total {
+  font-size: 87px;
+  margin-top: 50vh;
+  height: 35vh;
+}
+
+.ket{
+  position: absolute;
+}
+
+.jumlahluas,
+.jumlahkeliling, 
+.ketluas,
+.ketkeliling, 
+.jmlluas,
+.jmlkeliling {
+  margin-top: 50px;
+  padding-left: 40px;
+
+}
+
+.jumlahluas,
+.jumlahkeliling{
+  color: darkgreen;
+}
+
+.teks3datar {
+  width: 75px;
+  margin-top: 0px;
+}
+
+
+
+
+/* Tambah  */
+.kolom1, 
+.kolom2, 
+.kolom3 {
+  background-color: ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kolom1 {
+  background-color: ;
+  min-height: 75vh;
+}
+
+.kolom2 {
+  min-height: 10vh;
+}
+
+.kolom3 {
+  min-height: 10vh;
+}
+
+h2, h3, #simbol {
+  margin: 10px;
+  height: 250px;
+  width: 200px;
+  color: black;
+  font-size: 200px;
+  text-align: center;
+  border-radius: 18px;
+}
+
+h2 {
+  background-color: none;
+}
+
+#jmltambah {
+  background-color: burlywood;
+  height: 250px;
+  width: 500px;
+  margin-left: 50px;
+  color: burlywood;
+  font-size: 180px;
+  text-align: center;
+  border-radius: 18px;
+  border: 0 solid burlywood;
+}
+
+.tombolmenu {
+  background-color: white;
+  height: 45px;
+  width: 110px;
+  color: black;
+  font-size: 25px;
+  border-radius: 18px;
+  border: 3px solid rebeccapurple;
+}
+
+.tombolmenu:hover {
+  background-color: rebeccapurple;
+  color: white;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+
+.onoff {
+  margin-right: 20px;
+  color: red;
+  font-size: 50px;
+  display: none;
+}
+
+
+/* pecahan  */
+
+.kolom1pec, 
+.kolom2pec {
+  background-color: ;
+  justify-content: center;
+  align-items: center;
+  margin: auto 10px;
+  min-height: 75vh;
+}
+
+.tabelpec{
+  display: none;
+  position: absolute;
+}
+
+p.angkapec,
+p.jmlpecahanAB,
+p.jmlpecahanCD{
+  font-size: 180px;
+}
+
+
+p.jmlpecahancades,
+p.jmlpecahandes{
+  font-size: 130px;
+}
+
+p.operator{
+  font-size: 130px;
+}
+
+#jmlpecahandes, 
+#jmlpecahancades, 
+#jmlpecahanA, 
+#jmlpecahanB, 
+#jmlpecahanD, 
+#jmlpecahanC,
+#jmlpecahanbulA,
+#jmlpecahanbulB,
+#jmlpecahanbuldes
+{
+  margin-left: 50px;
+  color: red;
+}
+
+hr{
+  border-color: black ;
+  background-color: black;
+}
+
+#hrjml,
+#hrjmlbul1
+{
+  border-color: red ;
+  background-color: red;
+}
+
+#offtambahca,
+#offtambahdes,
+#offtambahbul1,
+#offtambahcaAB
+{
+  display: none;
+}
+
+
+
+/* Jam <=>  */
+h4 {
+  font-size: 100px;
+}
+
+.tomboloff {
+  position: absolute;
+  padding-left: 40% ;
+  margin-top: 0;
+}
+
+.offjam {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  color: black;
+  border-radius: 50%;
+  margin-top: 5vh;
+  display: none ;
+  border: 3px solid green;
+  color: green;
+}
+
+.offjam:hover{
+  background-color: green;
+  color: white;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+
+
+/* Km kg  */
+.btn1 {
+  border: 3px solid purple;
+  background-color: white;
+  color: darkgreen;
+  font-size: 15px;
+  cursor: pointer;
+  float: left;
+  width: 47px;
+  border-radius: 12px;
+}
+
+.btn1:hover {
+  background: purple;
+  color: white;
+}
+
+.angka {
+  height: 60vh;
+  font-size: 23px;
+  position: fixed;
+  width: 100%;
+  margin: 40px 10px 0;
+}
+
+.teks {
+  color: red;
+}
+
+.menu2, .menu1 {
+  text-align: center;
+  height: 10vh;
+  width: 100%; 
+  position: fixed;
+}
+
+.off {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  color: red;
+  border-radius: 50%;
+  margin: 5vh 2vh 0;
+  border: 3px solid red;
+  opacity: 0;
+  position: absolute;
+}
+
+.off:hover{
+  background-color: red;
+  color: white;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+
+.menu2 {
+  margin-top: 60vh;
+}
+
+.tombol2 {position: absolute;}
+
+.btn2 {
+  width: 56px;
+  border: 1px solid;
+  border-radius: 12px;
+  background-color: white;
+  color:
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  display: none;
+}
+
+.btn2:hover {
+  background: purple;
+}
+

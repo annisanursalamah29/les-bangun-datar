@@ -1,0 +1,4940 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bangun Datar</title>
+  <link rel="stylesheet" type="text/css" href="bangundatar.css">
+
+</head>
+
+<body>
+  <audio id="myaudio" src="Asia.mp3" ></audio>
+  
+  
+  <!-- menu utama -->
+  <div class="menuutama" id="menuutama">
+    <div class="sub">
+      <table border="2" class="tabelmenu">
+        <tr>
+          <td><button class="submenu" id="subtambah" onclick="mysubtambah()">+-×÷</button></td>
+          <td><button class="submenu" id="subjam" onclick="mysubjam()"><=> jam</button></td>
+            <td><button class="submenu" id="subdatar" onclick="mysubdatar()">bangun datar</button></td>
+            <td><button class="submenu" id="subkmkg" onclick="mysubkmkg()">km kg</button></td>
+            <td><button class="submenu" id="subpec" onclick="mysubpec()">Pecahan</button></td>
+            <td><button class="submenu" id="subfak" onclick="mysubfak()">Faktorial</button></td>
+            <td><button class="submenu" id="submusik" onclick="mysubmusik()">Music </button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
+    <!-- Tambah -->
+    <div class="mtk" id="tambah">
+      <div id="bar" class="bar"></div>
+
+      <div class="kolom1" id="kolom1teks">
+        <table>
+          <tr>
+            <td><h2 id="angka1tambah"></h2></td>
+            <td><h2 id="operatorta" class="operator"></h2></td>
+            <td><h2 id="angka2tambah"></h2></td>
+            <td><h2 class="operator">=</h2></td>
+            <td><h2 id="jmltambah"></h2></td>
+          </tr>
+        </table>      
+      </div> 
+
+      <table class="kolom2">
+        <!-- + - : x  -->
+        <tr>
+          <td><button id="tombolmenuta" class="tombolmenu" onclick="mytambah()">
+          +</button></td>
+          <td><button id="tombolmenuku" class="tombolmenu" onclick="mykurang()">
+          -</button></td>
+          <td><button id="tombolmenuka" class="tombolmenu" onclick="mykali()">
+          ×</button></td>
+          <td><button id="tombolmenuba" class="tombolmenu" onclick="mybagi()">
+          ÷</button></td>
+        </tr>
+      </table>
+
+      <table class="kolom3">
+       <!-- off and Back  -->
+       <tr>
+        <td><button class="onoff" id="offtambah" onclick="myPausetambah()">OFF</button></td>
+        <td>
+          <div class="uback" id="uback">
+            <button class="back" id="back" onclick="myback()">BACK</button>
+          </div></td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- Pecahan -->
+  <div class="mtk" id="pecahan">
+    <div id="bar" class="bar"></div>
+    <p id="clock"></p>
+
+    <div class="kolom1pec" id="kolom1teks">
+      <table class="tabelpec" id="tabelpec">
+        <tr>
+          <td id="angkapec1" class="tdangka"><p id="angka1pecahan" class="angkapec"></p><hr id="hr1" > </td> 
+          <td rowspan="2" class="tdoperator"><p id="operatorpec" class="operator"></p></td>
+          <td id="angkapec2" class="tdangka"><p id="angka3pecahan" class="angkapec"></p><hr id="hr2"></td>
+          <td rowspan="2" class="tdoperator"><p class="operator">=</p></td>
+          <td id="tdjmlpecahanAB"><p id="jmlpecahanA" class="jmlpecahanAB"></p><hr id="hrjml"></td>
+          <td rowspan="2" class="tdoperator"><p id="operator2" class="operator">=</p></td>
+          <td rowspan="2"><p id="jmlpecahandes" class="jmlpecahandes"></p></td>
+        </tr>
+
+        <tr>
+          <td id="angkapec1" class="tdangka"><p id="angka2pecahan" class="angkapec"></p></td>
+          <td id="angkapec2" class="tdangka"><p id="angka4pecahan" class="angkapec"></p></td>
+          <td id="tdjmlpecahanAB"><p id="jmlpecahanB" class="jmlpecahanAB"></p></td>
+        </tr>
+      </table>  
+
+      <table class="tabelpec" id="tabelpecca">
+        <tr>
+          <td id="angkapec1" class="tdangka"><p id="angka1pecahanca" class="angkapec"></p><hr> </td>
+          <td rowspan="2" class="tdoperator"><p id="operatorpecka" class="operator"></p></td>
+          <td id="angkapec3" class="tdangka"><p id="angka3pecahanca" class="angkapec"></p><hr> </td>
+          <td rowspan="2" class="tdoperator"><p id="operatorpecta" class="operator"></p></td>
+          <td id="angkapec5" class="tdangka"><p id="angka5pecahan" class="angkapec"></p> <hr> </td>
+          <td rowspan="2" class="tdoperator"><p id="operatorpecba" class="operator"></p></td>
+          <td id="angkapec7" class="tdangka"><p id="angka7pecahan" class="angkapec"></p><hr> </td>
+          <td rowspan="2" class="tdoperator"><p id="operatorpecku" class="operator"></p></td>
+          <td id="angkapec9" class="tdangka"><p id="angka9pecahan" class="angkapec"></p> <hr ></td>
+          <td rowspan="2"><p id="operatorpec" class="operator">=</p></td>
+          <td id="tdjmlpecahanCD"><p id="jmlpecahanD" class="jmlpecahanCD"></p><hr id="hrjml2"></td>
+          <td rowspan="2" class="tdoperator"><p id="operator3" class="operator">=</p></td>
+          <td rowspan="2"><p id="jmlpecahancades" class="jmlpecahancades"></p></td>
+        </tr>
+
+        <tr>
+          <td id="angkapec2" class="tdangka"><p id="angka2pecahanca" class="angkapec"></p> </td>
+          <td id="angkapec4" class="tdangka"><p id="angka4pecahanca" class="angkapec"></p></td>
+          <td id="angkapec6" class="tdangka"><p id="angka6pecahan" class="angkapec"></p> </td>
+          <td id="angkapec8" class="tdangka"><p id="angka8pecahan" class="angkapec"></p></td>
+          <td id="angkapec10" class="tdangka"><p id="angka10pecahan" class="angkapec"></p></td>
+          <td id="tdjmlpecahanCD"><p id="jmlpecahanC" class="jmlpecahanCD"></p></td>
+        </tr>
+      </table>
+
+      <table class="tabelpec" id="tabelpecbul">
+        <tr>
+          <td rowspan="2" id="angkapec1" class="tdangka"><p id="angka1pecahanbul1" class="angkapec"></p> </td> 
+          <td id="angkapec2" class="tdangka"><p id="angka2pecahanbul1" class="angkapec"></p><hr id="hrbul1"></td>
+          <td rowspan="2" class="tdoperator"><p id="operatorpecbul1" class="operator"></p></td>
+          <td id="angkapec2" class="tdangka"><p id="angka4pecahanbul1" class="angkapec"></p><hr id="hrbul1"></td>
+          <td rowspan="2" class="tdoperator"><p id="operator4" class="operator">=</p></td>
+          <td id="tdjmlpecahanAB"><p id="jmlpecahanbulA" class="jmlpecahanAB"></p><hr id="hrjmlbul1"></td>
+          <td rowspan="2" class="tdoperator"><p id="operator4" class="operator">=</p></td>
+          <td rowspan="2"><p id="jmlpecahanbuldes" class="jmlpecahandes"></p></td>
+        </tr>
+
+        <tr>
+          <td id="angkapec1" class="tdangka"><p id="angka3pecahanbul1" class="angkapec"></p></td>
+          <td id="angkapec2" class="tdangka"><p id="angka5pecahanbul1" class="angkapec"></p></td>
+          <td id="tdjmlpecahanAB"><p id="jmlpecahanbulB" class="jmlpecahanAB"></p></td>
+        </tr>
+      </table>  
+    </div>
+
+
+    <table class="kolom2">
+      <!-- + - : x  -->
+      <tr>
+        <td><button id="tombolmenupecdes" class="tombolmenu" onclick="mypecdesimal()">Desimal</button></td>
+        <td><button id="tombolmenupectam" class="tombolmenu" onclick="mypectambah()">+</button></td>
+        <td><button id="tombolmenupecku" class="tombolmenu" onclick="mypeckurang()">-</button></td>
+        <td><button id="tombolmenupecka" class="tombolmenu" onclick="mypeckali()">×</button></td>
+        <td><button id="tombolmenupecba" class="tombolmenu" onclick="mypecbagi()">:</button></td>
+        <td><button id="tombolmenupecca" class="tombolmenu" onclick="mypeccampuran()">x + : -</button></td>
+        <td><button id="tombolmenupecbul" class="tombolmenu" onclick="mypectambahbul()">Bul +</button></td>
+      </tr>
+    </table>
+
+    <table class="kolom3">
+     <!-- off and Back  -->
+     <tr>
+      <td>
+        <p class="onoff" id="offtambahdes" onclick="myPausetambahdes()"></p>
+        <p class="onoff" id="offtambahAB" onclick="myPausetambahAB()"></p>
+        <p class="onoff" id="offtambahca" onclick="myPausetambahca()"></p> 
+        <p class="onoff" id="offtambahbul1" onclick="myPausetambahbul1()"></p> 
+      </td>
+      <td>
+        <div class="uback" id="uback">
+          <button class="back" id="back" onclick="myback()">BACK</button>
+        </div></td>
+      </tr>
+    </table>
+
+  </div>
+</div>
+
+<!-- Jam -->
+<div class="mtk" id="jam">
+  <div id="bar" class="bar"></div>
+
+  <div class="kolom1" id="kolom1teks">
+    <table>
+      <tr>
+        <td><h3 id="angka1jam"></h3></td>
+        <td><h3 id="simbol"></h3></td>
+        <td><h3 id="angka2"></h3></td>
+        <td><h4 id="ket"></h4></td>
+      </tr>
+    </table> 
+  </div>
+
+  <table class="kolom2" id="kolom2menu">
+    <td><button id="tombolmenuban" class="tombolmenu" onclick="mybanding()">
+      <=></button></td>
+        <td><button id="tombolmenujam" class="tombolmenu" onclick="myjam()">
+        Jam</button></td>
+        <td><button id="tombolmenurom" class="tombolmenu" onclick="myrom()">
+        Romawi</button></td>
+      </table>
+
+      <table class="kolom3">
+        <tr>
+          <td><button class="offjam" id="offban" onclick="myPauseban()">OFF</button></td>
+          <td><button class="offjam" id="offjam" onclick="myPausejam()">OFF</button></td>
+          <td><button class="offjam" id="offrom" onclick="myPauserom()">OFF</button></td>
+          <td>
+            <div class="uback" id="uback">
+              <button class="back" id="back" onclick="myback()">BACK</button>
+            </div></td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
+
+    <!-- Km kg -->
+    <div class="mtk" id="kmkg">
+
+      <div id="bar" class="bar"></div>
+
+      <div class="kolom1kmkg">
+        <p>UKUR  PANANG</p>
+        <div class="menu1" id="menu1">
+          <table>
+            <tr>
+              <td><button class="btn1" onclick="mykm()">km</button></td>
+              <td><button class="btn1" onclick="myhm()">hm</button></td>
+              <td><button class="btn1" onclick="mydam()">dam</button></td>
+              <td><button class="btn1" onclick="mym()">m</button></td>
+              <td><button class="btn1" onclick="mydm()">dm</button></td>
+              <td><button class="btn1" onclick="mycm()">cm</button></td>
+              <td><button class="btn1" onclick="mymm()">mm</button></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="angka">
+          <table>
+            <tr>
+              <td><h1 class="teks" id="angka1"></h1></td>
+              <td><h1 class="teks" id="satuan1"></h1></td>
+            </tr>
+            <tr>
+              <td class="simbol">=</td>
+            </tr>
+            <tr>
+              <td><h1 class="teks" id="jml"></h1></td>
+              <td><h1 class="teks" id="satuan2"></h1></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="kolom2kmkg">
+        <div class="menu2">
+          <table class="tombol2">
+            <tr>
+              <td><button id="kmhm" class="btn2"  onclick="mykmhm()">km-hm</button></td>
+              <td><button id="kmdam" class="btn2" onclick="mykmdam()">km-dam</button></td>
+              <td><button id="kmm" class="btn2" onclick="mykmm()">km - m</button></td>
+              <td><button id="kmdm" class="btn2" onclick="mykmdm()">km-dm</button></td>
+              <td><button id="kmcm" class="btn2" onclick="mykmcm()">km-cm</button></td>
+              <td><button id="kmmm" class="btn2" onclick="mykmmm()">km-mm</button></td>
+            </tr>
+          </table>
+
+          <table class="tombol2">
+            <tr>
+              <td><button id="hmkm" class="btn2" onclick="myhmkm()">hm-km</button></td>
+              <td><button id="hmdam" class="btn2" onclick="myhmdam()">hm-dam</button></td>
+              <td><button id="hmm" class="btn2" onclick="myhmm()">hm - m</button></td>
+              <td><button id="hmdm" class="btn2" onclick="myhmdm()">hm-dm</button></td>
+              <td><button id="hmcm" class="btn2" onclick="myhmcm()">hm-cm</button></td>
+              <td><button id="hmmm" class="btn2" onclick="myhmmm()">hm-mm</button></td>
+            </tr>
+          </table>
+
+          <table class="tombol2">
+            <tr>
+              <td><button id="damkm" class="btn2" onclick="mydamkm()">dam-km</button></td>
+              <td><button id="damhm" class="btn2" onclick="mydamhm()">dam-hm</button></td>
+              <td><button id="damm" class="btn2" onclick="mydamm()">dam - m</button></td>
+              <td><button id="damdm" class="btn2" onclick="mydamdm()">dam-dm</button></td>
+              <td><button id="damcm" class="btn2" onclick="mydamcm()">dam-cm</button></td>
+              <td><button id="dammm" class="btn2" onclick="mydammm()">dam-mm</button></td>
+            </tr>
+          </table>
+
+          <table class="tombol2">
+            <tr>
+              <td><button id="mkm" class="btn2" onclick="mymkm()">m - km</button></td>
+              <td><button id="mhm" class="btn2" onclick="mymhm()">m - hm</button></td>
+              <td><button id="mdam" class="btn2" onclick="mymdam()">m -dam</button></td>
+              <td><button id="mdm" class="btn2" onclick="mymdm()">m - dm</button></td>
+              <td><button id="mcm" class="btn2" onclick="mymcm()">m - cm</button></td>
+              <td><button id="mml" class="btn2" onclick="mymml()">m - mm</button></td>
+            </tr>
+          </table>
+
+          <table class="tombol2">
+            <tr>
+              <td><button id="dmkm" class="btn2" onclick="mydmkm()">dm-km</button></td>
+              <td><button id="dmhm" class="btn2" onclick="mydmhm()">dm-hm</button></td>
+              <td><button id="dmdam" class="btn2" onclick="mydmdam()">dm -dam</button></td>
+              <td><button id="dmm" class="btn2" onclick="mydmm()">dm - m</button></td>
+              <td><button id="dmcm" class="btn2" onclick="mydmcm()">dm-cm</button></td>
+              <td><button id="dmmm" class="btn2" onclick="mydmmm()">dm-mm</button></td>
+            </tr>
+          </table>
+
+          <table class="tombol2">
+            <tr>
+              <td><button id="cmkm" class="btn2" onclick="mycmkm()">cm-km</button></td>
+              <td><button id="cmhm" class="btn2" onclick="mycmhm()">cm-hm</button></td>
+              <td><button id="cmdam" class="btn2" onclick="mycmdam()">cm -dam</button></td>
+              <td><button id="cmm" class="btn2" onclick="mycmm()">cm - m</button></td>
+              <td><button id="cmdm" class="btn2" onclick="mycmdm()">cm-dm</button></td>
+              <td><button id="cmmm" class="btn2" onclick="mycmmm()">cm-mm</button></td>
+            </tr>
+          </table>
+
+          <table class="tombol2">
+            <tr>
+              <td><button id="mmkm" class="btn2" onclick="mymmkm()">mm-km</button></td>
+              <td><button id="mmhm" class="btn2" onclick="mymmhm()">mm-hm</button></td>
+              <td><button id="mmdam" class="btn2" onclick="mymmdam()">mm-dam</button></td>
+              <td><button id="mmm" class="btn2" onclick="mymmm()">mm- m</button></td>
+              <td><button id="mmdm" class="btn2" onclick="mymmdm()">mm-dm</button></td>
+              <td><button id="mmcm" class="btn2" onclick="mymmcm()">mm-cm</button></td>
+            </tr>
+          </table>
+
+          <br><br>
+          <button class="off" id="off" onclick="myPausekmhm()">OFF</button>
+          <div class="uback" id="uback">
+            <button class="back" id="back" onclick="myback()">BACK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Bangun Datar -->
+    <div class="mtk" id="datar">
+      <div id="bar" class="bar"></div>
+      <p>UKUR  PANJANG</p>
+
+      <!-- soal -->
+      <div class="kolom1datar" id="kolom1datar">
+
+        <!-- panjang -->
+        <div class="kolomdatar" id="kolompanjang">
+          <!-- gambar huruf P L -->
+          <div class="persegi" id="persegi">
+            <div class="p">
+              <table>
+                <tr>
+                  <td><h5>P = </h5></td>
+                  <td><h5 class="teks2datar" id="angka2datar"></h5></td>
+                </tr>
+              </table> 
+            </div>
+
+            <div class="l">
+              <table>
+                <tr>
+                  <td><h5 >L = </h5></td>
+                  <td><h5 class="teks1datar" id="angka1datar"></h5></td>
+                </tr>
+              </table>
+            </div>    
+          </div>
+
+          <!-- ket panjang -->
+          <table class="ket">
+            <tr>  
+              <td><h6 class="ketkeliling" id="ketkeliling"></h6></td>
+              <td><h6 class="jumlahkeliling" id="jumlahkeliling"></h6></td>
+              <td><h6 class="jmlkeliling" id="jmlkeliling"></h6></td>
+            </tr> 
+          </table> 
+        </div>
+
+        <!-- bujur -->
+        <div class="kolomdatar" id="kolombujur">
+          <!-- gambar huruf S -->
+          <div class="bujur" id="bujur">
+            <div class="s">
+              <table>
+                <tr>
+                  <td><h5>S = </h5></td>
+                  <td><h5 class="teks2datar" id="angka3datar"></h5></td>
+                </tr>
+              </table> 
+            </div>
+          </div>
+
+          <!-- ket bujur -->
+          <table>
+            <tr>
+              <td><h6 class="ketluas" id="ketluas"></h6></td>
+              <td><h6 class="jumlahluas" id="jumlahluas"></h6></td>
+              <td><h6 class="jmlluas" id="jmlluas"></h6></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- sama sisi -->
+        <div class="kolomdatar" id="kolomsisi">
+          <!-- gambar huruf s t al-->
+          <div class="tsisi" id="tsisi">
+            <h5 class="ss">s</h5>
+            <h5 class="teks2datar" id="angka4datar"></h5>
+          </div>
+
+          <!-- ket sama sisi -->
+          <table>
+            <tr>
+              <td><h6 class="ketluas" id="ketsisi"></h6></td>
+              <td><h6 class="jumlahluas" id="jumlahsisi"></h6></td>
+              <td><h6 class="jmlluas" id="jmlsisi"></h6></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- siku -->
+        <div class="kolomdatar" id="kolomsiku">
+          <div class="tsiku" id="tsiku">
+            <h5 class="t">t</h5>
+            <br>
+            <h5 class="al">al</h5>
+          </div>
+
+          <!-- ket siku -->
+        </div>
+
+        <!-- kaki -->
+        <div class="kolomdatar" id="kolomkaki">
+          <div class="tkaki" id="tkaki">
+            <h5 class="a">a</h5>
+            <br>
+            <h5 class="b">b</h5>
+          </div>
+
+          <!-- ket kaki -->
+        </div>
+
+        <!-- lingkaran -->
+        <div class="kolomdatar" id="kolomlingkaran">
+          <!-- gambar huruf -->
+          <div class="lingkar" id="lingkar">
+            <p class="r">r</p>
+          </div>
+
+          <!-- ket lingkaran -->
+        </div>
+      </div> 
+
+      <!-- menu -->
+      <div class="kolom2datar">
+        <!-- menu -->
+        <div class="menu1datar" id="menu1datar">
+          <table>
+            <tr>
+              <td><button class="btn1datar" onclick="mypanjang()">Persegi panjang</button></td>
+            </tr>
+            <tr>
+              <td><button class="btn1datar" onclick="mybujur()">Bujur sangkar</button></td>
+            </tr>
+            <tr>
+              <td><button class="btn1datar" onclick="mysisi()">segitiga samasisi</button></td>
+            </tr>
+            <tr>
+              <td><button class="btn1datar" onclick="mykaki()">segitiga samakaki</button></td>
+            </tr>
+            <tr>
+              <td><button class="btn1datar" onclick="mylingkaran()">Lingkaran</button></td>
+            </tr>
+          </table> 
+        </div>
+
+        <!-- tombol keliling luas -->
+        <div class="menu2datar">
+          <!-- segi panjang -->
+          <table class="tombol2"> 
+            <tr>
+              <td><button id="keliling" class="btn2datar"  onclick="mykelpan()">Keliling</button></td>
+              <td><button id="luas" class="btn2datar" onclick="mylupan()">Luas B</button></td>
+              <td><button id="simlip" class="btn2datar" onclick="mysimlip()">SimLip</button></td>
+              <td><button id="simput" class="btn2datar" onclick="mysimput()">Simput</button></td>
+            </tr>
+          </table>
+
+          <!-- segi empat -->
+          <table class="tombol2">
+            <tr>
+              <td><button id="kelbuj" class="btn2datar"  onclick="mykelbuj()">Keliling</button></td>
+              <td><button id="lubuj" class="btn2datar" onclick="mylubuj()">Luas</button></td>
+              <td><button id="simlip" class="btn2datar" onclick="mysimlip()">SimLip</button></td>
+              <td><button id="simput" class="btn2datar" onclick="mysimput()">Simput</button></td>
+            </tr>
+          </table>
+
+          <!-- segi tiga sama sisi -->
+          <table class="tombol2">
+            <tr>
+              <td><button id="kelsis" class="btn2datar"  onclick="mykelsis()">Keliling</button></td>
+              <td><button id="lusis" class="btn2datar" onclick="mylusis()">Luas</button></td>
+            </tr>
+          </table>
+
+          <!-- segi tiga sama kaki -->
+          <table class="tombol2">
+            <tr>
+              <td><button id="kelkak" class="btn2datar"  onclick="mykelkak()">Keliling</button></td>
+              <td><button id="lukak" class="btn2datar" onclick="mylukak()">Luas</button></td>
+            </tr>
+          </table>
+
+          <!-- lingkaran -->
+          <table class="tombol2">
+            <tr>
+              <td><button id="kelling" class="btn2datar"  onclick="mykelling()">Keliling</button></td>
+              <td><button id="luling" class="btn2datar" onclick="myluling()">Luas</button></td>
+            </tr>
+          </table>
+
+          <br>
+          <table class="">
+            <!-- off and Back  -->
+            <tr>
+              <td>
+                <div class="ubackdatar" id="uback">
+                  <p class="offdatar" id="offdatar" onclick="myPausedatar()"></p>
+                  <button class="back" id="back" onclick="myback()">BACK</button>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>  
+      </div>
+
+      <div class="mtk" id="musik">
+        <div class="musik">
+          <audio id="a" src="Asia.mp3"></audio>
+          <audio id="b" src="Ajimin set me free.mp3"></audio>
+          <audio id="c" src="AAdele Easy On Me.mp3"></audio>
+          <audio id="d" src="ABts Run.mp3"></audio>
+          <audio id="e" src="ALagu Santai.mp3"></audio>
+          <audio id="g" src=".mp3"></audio>
+          <audio id="f" src=".mp3"></audio>
+          <video src="bts.mp4" controls loop width="100%">bts.mp4</video>
+        </div>
+
+        <div class="tabel">
+          <table>
+            <tr>
+              <button class="btn success" onclick="mya()"> sia <br> unatoppeble
+              </button>
+              <button class="btn info" onclick="myb()">jimin <br> Set Me Free</button>
+              <button class="btn warning" onclick="myc()">Adele <br> Easy On Me</button>
+              <button class="btn danger" onclick="myd()">Bts <br> Run</button>
+              <button class="btn default" onclick="mye()">Lagu <br> Santai</button>
+              <button class="btn info" onclick="myf()">c</button>
+            </tr>
+          </table>
+        </div>
+
+        <div class="lirik">
+
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      var mus = document.getElementById("myaudio");
+
+/* menu utama */
+      function mysubdatar() {
+        document.getElementById('datar').style.display = "block";
+        document.getElementById('menuutama').style.display = "none";
+        document.getElementById('tambah').style.display = "none";
+        document.getElementById('jam').style.display = "none";
+        document.getElementById('kmkg').style.display = "none";
+        document.getElementById('pecahan').style.display = "none";
+        document.getElementById('uback').style.display = "flex";
+      }
+
+      function mysubtambah() {
+        document.getElementById('datar').style.display = "none";
+        document.getElementById('menuutama').style.display = "none";
+        document.getElementById('tambah').style.display = "block";
+        document.getElementById('jam').style.display = "none";
+        document.getElementById('kmkg').style.display = "none";
+        document.getElementById('pecahan').style.display = "none";
+        document.getElementById('uback').style.display = "flex";
+      }
+
+      function mysubjam() {
+        document.getElementById('datar').style.display = "none";
+        document.getElementById('menuutama').style.display = "none";
+        document.getElementById('tambah').style.display = "none";
+        document.getElementById('jam').style.display = "block";
+        document.getElementById('kmkg').style.display = "none";
+        document.getElementById('pecahan').style.display = "none";
+        document.getElementById('uback').style.display = "flex";
+      }
+
+      function mysubkmkg() {
+        document.getElementById('kmkg').style.display = "block";
+        document.getElementById('datar').style.display = "none";
+        document.getElementById('menuutama').style.display = "none";
+        document.getElementById('tambah').style.display = "none";
+        document.getElementById('jam').style.display = "none";
+        document.getElementById('pecahan').style.display = "none";
+        document.getElementById('uback').style.display = "flex";
+      }
+
+      function mysubpec() {
+        document.getElementById('pecahan').style.display = "block";
+        document.getElementById('kmkg').style.display = "none";
+        document.getElementById('datar').style.display = "none";
+        document.getElementById('menuutama').style.display = "none";
+        document.getElementById('tambah').style.display = "none";
+        document.getElementById('jam').style.display = "none";
+        document.getElementById('uback').style.display = "flex";
+      }
+
+      function mysubmusik() {
+        document.getElementById('datar').style.display = "none";
+        document.getElementById('menuutama').style.display = "none";
+        document.getElementById('tambah').style.display = "none";
+        document.getElementById('jam').style.display = "none";
+        document.getElementById('kmkg').style.display = "none";
+        document.getElementById('musik').style.display = "block";
+        document.getElementById('uback').style.display = "flex";
+      }
+
+
+/* tambah */
+      function mytambah() {
+        mus.play();
+        document.getElementById("operatorta").innerHTML = "+";
+
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1tambah').innerHTML = getRndInteger(1, 10);
+
+        let y = document.getElementById('angka2tambah').innerHTML = getRndInteger(1, 10);
+
+        let tam = x + y;
+
+        document.getElementById('jmltambah').innerHTML = tam;
+
+        document.getElementById("jmltambah").style.color = "burlywood";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+      }
+
+      function mykurang() {
+        mus.play();
+        document.getElementById("operatorta").innerHTML = "-";
+
+        document.getElementById("bar").style.animationPlayState = "running"; 
+
+        let x = document.getElementById('angka1tambah').innerHTML = getRndInteger(1, 100);
+
+        let y = document.getElementById('angka2tambah').innerHTML = getRndInteger(1, 10);
+
+        let kur = x - y;
+
+        document.getElementById('jmltambah').innerHTML = kur;
+
+        document.getElementById("jmltambah").style.color = "burlywood";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+      }
+
+      function mykali() {
+        mus.play();
+        document.getElementById("operatorta").innerHTML = "×";
+
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1tambah').innerHTML = getRndInteger(1, 10);
+
+        let y = document.getElementById('angka2tambah').innerHTML = getRndInteger(1, 10);
+
+        let kali = x * y;
+
+        document.getElementById('jmltambah').innerHTML = kali;
+
+        document.getElementById("jmltambah").style.color = "burlywood";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+      function mybagi() {
+        mus.play();
+        document.getElementById("operatorta").innerHTML = "÷";
+
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1tambah').innerHTML = getRndInteger(1, 100);
+
+        let y = document.getElementById('angka2tambah').innerHTML = getRndInteger(1, 10);
+
+        let bagi = x / y;
+
+        document.getElementById('jmltambah').innerHTML = bagi;
+
+        document.getElementById("jmltambah").style.color = "burlywood";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+      function myPausetambah() {
+        document.getElementById("bar").style.animationPlayState = "paused";
+
+        document.getElementById("jmltambah").style.color = "red";
+      }
+
+
+/* pecahan */
+      function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+
+      function mypecdesimal() {
+        mus.play();  
+        document.getElementById("bar").style.animationPlayState = "running";
+        document.getElementById('tabelpec').style.display = "block";
+        document.getElementById('tabelpecbul').style.display = "none";
+        document.getElementById('tabelpecca').style.display = "none";
+        document.getElementById('offtambahca').style.display = "none";
+        document.getElementById('offtambahAB').style.display = "none";
+        document.getElementById('offtambahbul1').style.display = "none";
+        document.getElementById('offtambahdes').style.display = "block";
+        document.getElementById('operator2').style.display = "none";
+        document.getElementById('operatorpec').style.display = "none";
+        document.getElementById('angka3pecahan').style.display = "none";
+        document.getElementById('angka4pecahan').style.display = "none";
+        document.getElementById('jmlpecahanA').style.display = "none";
+        document.getElementById('jmlpecahanB').style.display = "none";
+        document.getElementById('jmlpecahandes').style.display = "none";
+        document.getElementById('hr2').style.display = "none";
+        document.getElementById('hrjml').style.display = "none";
+
+        let waktu = document.getElementById('offtambahdes');
+
+        function mundur(menit) {
+          let interval = setInterval(function() {
+            if (menit >= 0) {
+              waktu.innerHTML = menit--;
+            }else{
+              clientInformation(waktu);
+              waktu.innerHTML ='waktu habis';
+            }
+          }, 1000);
+        }
+        mundur(4);
+
+        let x = document.getElementById('angka1pecahan').innerHTML = getRndInteger(1, 10);
+        let y = document.getElementById('angka2pecahan').innerHTML = getRndInteger(1, 10);
+        let bagides= x/y;
+
+        let timeid = setTimeout(() => {
+          document.getElementById('jmlpecahandes').innerHTML = bagides; 
+          document.getElementById('jmlpecahandes').style.display = "block";
+        },  5000);
+      }
+
+      function mypectambah() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+        document.getElementById('tabelpecbul').style.display = "none";
+        document.getElementById('tabelpec').style.display = "block";
+        document.getElementById('tabelpecca').style.display = "none";
+        document.getElementById('offtambahca').style.display = "none";
+        document.getElementById('offtambahdes').style.display = "none";
+        document.getElementById('offtambahAB').style.display = "block";
+        document.getElementById('offtambahbul1').style.display = "none";
+        document.getElementById('angka3pecahan').style.display = "block";
+        document.getElementById('angka4pecahan').style.display = "block";
+        document.getElementById('jmlpecahandes').style.display = "none";
+        document.getElementById('jmlpecahanA').style.display = "none";
+        document.getElementById('jmlpecahanB').style.display = "none";
+        document.getElementById('hr2').style.display = "block";
+        document.getElementById('hrjml').style.display = "none";
+        document.getElementById('operator2').style.display = "none";
+        document.getElementById('operatorpec').style.display = "block";
+        document.getElementById("operatorpec").innerHTML = "+";
+
+        let waktu = document.getElementById('offtambahAB');
+
+        function mundur(menit) {
+          let interval = setInterval(function() {
+            if (menit >= 0) {
+              waktu.innerHTML = menit--;
+            }else{
+              clientInformation(waktu);
+              waktu.innerHTML ='waktu habis';
+            }
+          }, 1000);
+        }
+        mundur(29);
+
+        let x = document.getElementById('angka1pecahan').innerHTML = getRndInteger(1, 10);
+        let y = document.getElementById('angka2pecahan').innerHTML = getRndInteger(1, 10);
+        let m = document.getElementById('angka3pecahan').innerHTML = getRndInteger(1, 10);
+        let n = document.getElementById('angka4pecahan').innerHTML = getRndInteger(1, 10);
+
+        let b = y*n;
+        let b1 = b/y*x;
+        let b2 = b/n*m;
+        let a = b1+b2;
+        let bagi = a/b;
+
+        let timeid = setTimeout(() => {
+          document.getElementById('jmlpecahanA').innerHTML = a;
+          document.getElementById('jmlpecahanB').innerHTML = b;
+          document.getElementById('jmlpecahandes').innerHTML = bagi;
+          document.getElementById('jmlpecahanA').style.display = "block";
+          document.getElementById('jmlpecahanB').style.display = "block";
+          document.getElementById('jmlpecahandes').style.display = "block";
+          document.getElementById('operator2').style.display = "block";
+          document.getElementById('hrjml').style.display = "block";
+        },  30000);
+      }
+
+
+      function mypeckurang() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+        document.getElementById('tabelpecbul').style.display = "none";
+        document.getElementById('tabelpec').style.display = "block";
+        document.getElementById('tabelpecca').style.display = "none";
+        document.getElementById('offtambahca').style.display = "none";
+        document.getElementById('offtambahdes').style.display = "none";
+        document.getElementById('offtambahAB').style.display = "block";
+        document.getElementById('offtambahbul1').style.display = "none";
+        document.getElementById('angka3pecahan').style.display = "block";
+        document.getElementById('angka4pecahan').style.display = "block";
+        document.getElementById('jmlpecahandes').style.display = "none";
+        document.getElementById('jmlpecahanA').style.display = "none";
+        document.getElementById('jmlpecahanB').style.display = "none";
+        document.getElementById('hr2').style.display = "block";
+        document.getElementById('hrjml').style.display = "none";
+        document.getElementById('operator2').style.display = "none";
+        document.getElementById('operatorpec').style.display = "block";
+        document.getElementById('operatorpec').innerHTML = "-";
+
+        let waktu = document.getElementById('offtambahAB');
+
+        function mundur(menit) {
+          let interval = setInterval(function() {
+            if (menit >= 0) {
+              waktu.innerHTML = menit--;
+            }else{
+              clientInformation(waktu);
+              waktu.innerHTML ='waktu habis';
+            }
+          }, 1000);
+        }
+        mundur(29);
+
+        let x = document.getElementById('angka1pecahan').innerHTML = getRndInteger(1, 10);
+        let y = document.getElementById('angka2pecahan').innerHTML = getRndInteger(1, 10);
+        let m = document.getElementById('angka3pecahan').innerHTML = getRndInteger(1, 10);
+        let n = document.getElementById('angka4pecahan').innerHTML = getRndInteger(1, 10);
+
+        let b = y*n;
+        let b1 = b/y*x;
+        let b2 = b/n*m;
+        let a = b1-b2;
+        let bagi = a/b;
+
+        let timeid = setTimeout(() => {
+          document.getElementById('jmlpecahanA').innerHTML = a;
+          document.getElementById('jmlpecahanB').innerHTML = b;
+          document.getElementById('jmlpecahandes').innerHTML = bagi;
+          document.getElementById('jmlpecahanA').style.display = "block";
+          document.getElementById('hrjml').style.display = "block";
+          document.getElementById('jmlpecahanB').style.display = "block";
+          document.getElementById('operator2').style.display = "block";
+          document.getElementById('jmlpecahandes').style.display = "block";
+        },  30000);
+      }
+
+      function mypeckali() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+        document.getElementById('tabelpecbul').style.display = "none";
+        document.getElementById('tabelpec').style.display = "block";
+        document.getElementById('tabelpecca').style.display = "none";
+        document.getElementById('offtambahca').style.display = "none";
+        document.getElementById('offtambahdes').style.display = "none";
+        document.getElementById('offtambahAB').style.display = "block";
+        document.getElementById('offtambahbul1').style.display = "none";
+        document.getElementById('angka3pecahan').style.display = "block";
+        document.getElementById('angka4pecahan').style.display = "block";
+        document.getElementById('jmlpecahandes').style.display = "none";
+        document.getElementById('jmlpecahanA').style.display = "none";
+        document.getElementById('jmlpecahanB').style.display = "none";
+        document.getElementById('hr2').style.display = "block";
+        document.getElementById('hrjml').style.display = "none";
+        document.getElementById('operator2').style.display = "none";
+        document.getElementById('operatorpec').style.display = "block";
+        document.getElementById('operatorpec').innerHTML = "x";
+
+        let waktu = document.getElementById('offtambahAB');
+
+        function mundur(menit) {
+          let interval = setInterval(function() {
+            if (menit >= 0) {
+              waktu.innerHTML = menit--;
+            }else{
+              clientInformation(waktu);
+              waktu.innerHTML ='waktu habis';
+            }
+          }, 1000);
+        }
+        mundur(29);
+
+        let x = document.getElementById('angka1pecahan').innerHTML = getRndInteger(1, 10);
+        let y = document.getElementById('angka2pecahan').innerHTML = getRndInteger(1, 10);
+        let m = document.getElementById('angka3pecahan').innerHTML = getRndInteger(1, 10);
+        let n = document.getElementById('angka4pecahan').innerHTML = getRndInteger(1, 10);
+
+        let kali1 = x*m;
+        let kali2 = y*n;
+        let bagi = kali1/kali2;
+
+        let timeid = setTimeout(() => {
+          document.getElementById('jmlpecahanA').innerHTML = kali1;
+          document.getElementById('jmlpecahanB').innerHTML = kali2;
+          document.getElementById('jmlpecahandes').innerHTML = bagi;
+          document.getElementById('jmlpecahanA').style.display = "block";
+          document.getElementById('jmlpecahanB').style.display = "block";
+          document.getElementById('jmlpecahandes').style.display = "block";
+          document.getElementById('operator2').style.display = "block";
+          document.getElementById('hrjml').style.display = "block"
+        },  30000);
+      }
+
+      function mypecbagi() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+        document.getElementById('tabelpecbul').style.display = "none";
+        document.getElementById('tabelpec').style.display = "block";
+        document.getElementById('tabelpecca').style.display = "none";
+        document.getElementById('offtambahca').style.display = "none";
+        document.getElementById('offtambahdes').style.display = "none";
+        document.getElementById('offtambahAB').style.display = "block";
+        document.getElementById('offtambahbul1').style.display = "none";
+        document.getElementById('angka3pecahan').style.display = "block";
+        document.getElementById('angka4pecahan').style.display = "block";
+        document.getElementById('jmlpecahandes').style.display = "none";
+        document.getElementById('jmlpecahanA').style.display = "none";
+        document.getElementById('jmlpecahanB').style.display = "none";
+        document.getElementById('hr2').style.display = "block";
+        document.getElementById('hrjml').style.display = "none";
+        document.getElementById('operator2').style.display = "none";
+        document.getElementById('operatorpec').style.display = "block";
+        document.getElementById("operatorpec").innerHTML = ":";
+
+        let waktu = document.getElementById('offtambahAB');
+
+        function mundur(menit) {
+          let interval = setInterval(function() {
+            if (menit >= 0) {
+              waktu.innerHTML = menit--;
+            }else{
+              clientInformation(waktu);
+              waktu.innerHTML ='waktu habis';
+            }
+          }, 1000);
+        }
+        mundur(29);
+
+        let x = document.getElementById('angka1pecahan').innerHTML = getRndInteger(1, 10);
+        let y = document.getElementById('angka2pecahan').innerHTML = getRndInteger(1, 10);
+        let m = document.getElementById('angka3pecahan').innerHTML = getRndInteger(1, 10);
+        let n = document.getElementById('angka4pecahan').innerHTML = getRndInteger(1, 10);
+
+        let bagi1 = x*n;
+        let bagi2 = y*m;
+        let bagi = bagi1/bagi2;
+
+        let timeid = setTimeout(() => {
+          document.getElementById('jmlpecahanA').innerHTML = bagi1;
+          document.getElementById('jmlpecahanB').innerHTML = bagi2;
+          document.getElementById('jmlpecahandes').innerHTML = bagi;
+          document.getElementById('jmlpecahanA').style.display = "block";
+          document.getElementById('jmlpecahanB').style.display = "block";
+          document.getElementById('jmlpecahandes').style.display = "block";
+          document.getElementById('operator2').style.display = "block";
+          document.getElementById('hrjml').style.display = "block"
+        },  30000);
+      }
+
+      function mypeccampuran() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+        document.getElementById('tabelpecbul').style.display = "none";
+        document.getElementById('tabelpec').style.display = "none";
+        document.getElementById('tabelpecca').style.display = "block";
+        document.getElementById('offtambahca').style.display = "block";
+        document.getElementById('offtambahdes').style.display = "none";
+        document.getElementById('offtambahAB').style.display = "none";
+        document.getElementById('offtambahbul1').style.display = "none";
+        document.getElementById('jmlpecahanD').style.display = "none";
+        document.getElementById('jmlpecahanC').style.display = "none";
+        document.getElementById('jmlpecahancades').style.display = "none";
+        document.getElementById('operator3').style.display = "none";
+        document.getElementById('hrjml2').style.display = "none";
+        document.getElementById("operatorpecta").innerHTML = "+";
+        document.getElementById("operatorpecka").innerHTML = "x";
+        document.getElementById("operatorpecku").innerHTML = "-";
+        document.getElementById("operatorpecba").innerHTML = ":";
+
+        let x = document.getElementById('angka1pecahanca').innerHTML = getRndInteger(1, 10);
+        let y = document.getElementById('angka2pecahanca').innerHTML = getRndInteger(1, 10);
+        let m = document.getElementById('angka3pecahanca').innerHTML = getRndInteger(1, 10);
+        let n = document.getElementById('angka4pecahanca').innerHTML = getRndInteger(1, 10);
+        let o = document.getElementById('angka5pecahan').innerHTML = getRndInteger(1, 10);
+        let p = document.getElementById('angka6pecahan').innerHTML = getRndInteger(1, 10);
+        let r = document.getElementById('angka7pecahan').innerHTML = getRndInteger(1, 10);
+        let s = document.getElementById('angka8pecahan').innerHTML = getRndInteger(1, 10);
+        let t = document.getElementById('angka9pecahan').innerHTML = getRndInteger(1, 10);
+        let u = document.getElementById('angka10pecahan').innerHTML = getRndInteger(1, 10);
+
+        let waktu = document.getElementById('offtambahca');
+
+        function mundur(menit) {
+          let interval = setInterval(function() {
+            if (menit >= 0) {
+              waktu.innerHTML = menit--;
+            }else{
+              clientInformation(waktu);
+              waktu.innerHTML ='waktu habis';
+            }
+          }, 1000);
+        }
+        mundur(59);
+
+        let bagi1 = o*s;
+        let bagi2 = p*r;
+        let kali1 = x*m;
+        let kali2 = y*n;
+        let b = kali2*bagi2;
+        let b1 = b/kali2*kali1;
+        let b2 = b/bagi2*bagi1;
+        let a = b1+b2; 
+        let c = b*u;
+        let c1 = c/b*a;
+        let c2 = c/u*t;
+        let d = c1-c2; 
+        let bagi = d/c;
+
+        let timeid = setTimeout(() => {
+          document.getElementById('jmlpecahanC').innerHTML = c;
+          document.getElementById('jmlpecahanD').innerHTML = d;
+          document.getElementById('jmlpecahancades').innerHTML = bagi;
+          document.getElementById('jmlpecahanD').style.display = "block";
+          document.getElementById('hrjml2').style.display = "block";
+          document.getElementById('jmlpecahanC').style.display = "block";
+          document.getElementById('operator3').style.display = "block";
+          document.getElementById('jmlpecahancades').style.display = "block";
+        },  60000);
+      }
+
+      function mypectambahbul() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+        document.getElementById('tabelpecbul').style.display = "block";
+        document.getElementById('tabelpec').style.display = "none";
+        document.getElementById('tabelpecca').style.display = "none";
+        document.getElementById('offtambahca').style.display = "none";
+        document.getElementById('offtambahdes').style.display = "none";
+        document.getElementById('offtambahAB').style.display = "none";
+        document.getElementById('offtambahbul1').style.display = "block";
+        document.getElementById('jmlpecahanbulA').style.display = "none";
+        document.getElementById('jmlpecahanbulB').style.display = "none";
+        document.getElementById('jmlpecahanbuldes').style.display = "none";
+        document.getElementById('hrbul1').style.display = "block";
+        document.getElementById('hrjmlbul1').style.display = "none";
+        document.getElementById('operator4').style.display = "none";
+        document.getElementById('operatorpecbul1').style.display = "block";
+        document.getElementById("operatorpecbul1").innerHTML = "+";
+
+        let waktu = document.getElementById('offtambahbul1');
+
+        function mundur(menit) {
+          let interval = setInterval(function() {
+            if (menit >= 0) {
+              waktu.innerHTML = menit--;
+            }else{
+              clientInformation(waktu);
+              waktu.innerHTML ='waktu habis';
+            }
+          }, 1000);
+        }
+        mundur(29);
+
+        let m = document.getElementById('angka1pecahanbul1').innerHTML = getRndInteger(1, 10);
+        let a = document.getElementById('angka2pecahanbul1').innerHTML = getRndInteger(1, 10);
+        let b = document.getElementById('angka3pecahanbul1').innerHTML = getRndInteger(1, 10);
+        let x = document.getElementById('angka4pecahanbul1').innerHTML = getRndInteger(1, 10);
+        let y = document.getElementById('angka5pecahanbul1').innerHTML = getRndInteger(1, 10);
+
+        let n = b*m+a;
+        let s = b*y;
+        let s1 = s/b*n;
+        let s2 = s/y*x;
+        let r = s1+s2;
+        let bagi = r/s;
+
+        let timeid = setTimeout(() => {
+          document.getElementById('jmlpecahanbulA').innerHTML = r;
+          document.getElementById('jmlpecahanbulB').innerHTML = s;
+          document.getElementById('jmlpecahanbuldes').innerHTML = bagi;
+          document.getElementById('jmlpecahanbulA').style.display = "block";
+          document.getElementById('jmlpecahanbulB').style.display = "block";
+          document.getElementById('jmlpecahanbuldes').style.display = "block";
+          document.getElementById('operator4').style.display = "block";
+          document.getElementById('hrjmlbul1').style.display = "block"
+        },  30000);
+      }
+
+
+/* Jam <=> */
+      function mybanding() {
+        mus.play();
+
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        var ban = document.getElementById("offban");
+        var jam = document.getElementById("offjam");
+        var rom = document.getElementById("offrom");
+        if (rom.style.display === "none") {
+          rom.style.display = "none";
+        } else {
+          rom.style.display = "none";
+        }
+
+        if (ban.style.display === "none") {
+          ban.style.display = "block";
+        } else {
+          ban.style.display = "block";
+        }
+
+        if (jam.style.display === "none") {
+          jam.style.display = "none";
+        } else {
+          jam.style.display = "none";
+        }
+
+        document.getElementById('simbol').style.color = 'white';
+        document.getElementById('ket').style.color = 'white';
+        document.getElementById('ket').style.opacity = '100%';
+        document.getElementById('angka2').style.color = 'black';
+
+        let x = document.getElementById('angka1jam').innerHTML = getRndInteger(1, 100);
+
+        let y = document.getElementById('angka2').innerHTML = getRndInteger(1, 100);
+
+        if (x < y) {
+          document.getElementById('simbol').innerHTML = '<';
+          document.getElementById('ket').innerHTML = 'Lebih Kecil';
+        } else if (x > y) {
+          document.getElementById('simbol').innerHTML = '>';
+          document.getElementById('ket').innerHTML = 'Lebih Besar';
+        }else {
+          document.getElementById('simbol').innerHTML = '=';
+          document.getElementById('ket').innerHTML = 'Sama Dengan';
+        }
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+      function myjam() {
+        mus.play();
+
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        var ban = document.getElementById("offban");
+        var jam = document.getElementById("offjam");
+        var rom = document.getElementById("offrom");
+        if (rom.style.display === "none") {
+          rom.style.display = "none";
+        } else {
+          rom.style.display = "none";
+        }
+
+        if (ban.style.display === "none") {
+          ban.style.display = "none";
+        } else {
+          ban.style.display = "none";
+        }
+
+        if (jam.style.display === "none") {
+          jam.style.display = "block";
+        } else {
+          jam.style.display = "block";
+        }
+
+
+        document.getElementById('angka2').style.color = 'white';
+        document.getElementById('simbol').style.color = 'black';
+        document.getElementById('simbol').innerHTML = '=';
+        document.getElementById('ket').style.opacity = '0';
+
+
+        let x = document.getElementById('angka1jam').innerHTML = getRndInteger(1, 25);
+
+        if (x == 1) {
+          document.getElementById('angka2').innerHTML = '13 ';
+        } else if (x == 2) {
+          document.getElementById('angka2').innerHTML = '14 ';
+        } else if (x == 3) {
+          document.getElementById('angka2').innerHTML = '15 ';
+        }else if (x == 4) {
+          document.getElementById('angka2').innerHTML = '16 ';
+        }else if (x == 5) {
+          document.getElementById('angka2').innerHTML = '17 ';
+        }else if (x == 6) {
+          document.getElementById('angka2').innerHTML = '18 ';
+        }else if (x == 7) {
+          document.getElementById('angka2').innerHTML = '19 ';
+        }else if (x == 8) {
+          document.getElementById('angka2').innerHTML = '20 ';
+        }else if (x == 9) {
+          document.getElementById('angka2').innerHTML = '21 ';
+        }else if (x == 10) {
+          document.getElementById('angka2').innerHTML = '22 ';
+        }else if (x == 11) {
+          document.getElementById('angka2').innerHTML = '23 ';
+        }else if (x == 12) {
+          document.getElementById('angka2').innerHTML = '24 ';
+        }else if (x == 13) {
+          document.getElementById('angka2').innerHTML = '1pm';
+        }else if (x == 14) {
+          document.getElementById('angka2').innerHTML = '2pm';
+        }else if (x == 15) {
+          document.getElementById('angka2').innerHTML = '3pm';
+        }else if (x == 16) {
+          document.getElementById('angka2').innerHTML = '4pm';
+        }else if (x == 17) {
+          document.getElementById('angka2').innerHTML = '5pm';
+        }else if (x == 18) {
+          document.getElementById('angka2').innerHTML = '6pm';
+        }else if (x == 19) {
+          document.getElementById('angka2').innerHTML = '7pm';
+        }else if (x == 20) {
+          document.getElementById('angka2').innerHTML = '8pm';
+        }else if (x == 21) {
+          document.getElementById('angka2').innerHTML = '9pm';
+        }else if (x == 22) {
+          document.getElementById('angka2').innerHTML = '10pm';
+        }else if (x == 23) {
+          document.getElementById('angka2').innerHTML = '11pm';
+        }else {
+          document.getElementById('angka2').innerHTML = '12pm';
+        }
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+
+      function myrom() {
+        mus.play();
+
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        var ban = document.getElementById("offban");
+        var jam = document.getElementById("offjam");
+        var rom = document.getElementById("offrom");
+        if (rom.style.display === "none") {
+          rom.style.display = "block";
+        } else {
+          rom.style.display = "block";
+        }
+
+        if (ban.style.display === "none") {
+          ban.style.display = "none";
+        } else {
+          ban.style.display = "none";
+        }
+
+        if (jam.style.display === "none") {
+          jam.style.display = "none";
+        } else {
+          jam.style.display = "none";
+        }
+
+
+        document.getElementById('angka2').style.color = 'white';
+        document.getElementById('simbol').style.color = 'black';
+        document.getElementById('simbol').innerHTML = '=';
+        document.getElementById('ket').style.opacity = '0';
+
+
+        let x = document.getElementById('angka1jam').innerHTML = getRndInteger(1, 15);
+        let i = document.getElementById('angka2').innerHTML = 'I';
+        let ii = document.getElementById('angka2').innerHTML = 'II';
+        let iii = document.getElementById('angka2').innerHTML = 'III';
+        let v = document.getElementById('angka2').innerHTML = 'V';
+        let sep = document.getElementById('angka2').innerHTML = 'X';
+        let l = document.getElementById('angka2').innerHTML = 'L';
+        let c = document.getElementById('angka2').innerHTML = 'C';
+        let d = document.getElementById('angka2').innerHTML = 'D';
+        let m = document.getElementById('angka2').innerHTML = 'M';
+
+
+        if (x == 1) {
+          document.getElementById('angka2').innerHTML = i;
+        } else if (x == 2) {
+          document.getElementById('angka2').innerHTML = ii;
+        } else if (x == 3) {
+          document.getElementById('angka2').innerHTML = iii;
+        }else if (x == 4) {
+          document.getElementById('angka2').innerHTML = i+v;
+        }else if (x == 5) {
+          document.getElementById('angka2').innerHTML = v;
+        }else if (x == 6) {
+          document.getElementById('angka2').innerHTML = v+i;
+        }else if (x == 7) {
+          document.getElementById('angka2').innerHTML = v+ii;
+        }else if (x == 8) {
+          document.getElementById('angka2').innerHTML = v+iii;
+        }else if (x == 9) {
+          document.getElementById('angka2').innerHTML = i+sep;
+        }else if (x == 10) {
+          document.getElementById('angka2').innerHTML = sep;
+        }else if (x == 11) {
+          document.getElementById('angka2').innerHTML = sep+i;
+        }else if (x == 12) {
+          document.getElementById('angka2').innerHTML = sep+ii;
+        }else if (x == 13) {
+          document.getElementById('angka2').innerHTML = sep+iii;
+        }else if (x == 14) {
+          document.getElementById('angka2').innerHTML = sep+i+v;
+        }else if (x == 15) {
+          document.getElementById('angka2').innerHTML = sep+v;
+        }else if (x == 20) {
+          document.getElementById('angka2').innerHTML = sep+sep;
+        }else if (x == 25) {
+          document.getElementById('angka2').innerHTML = sep+sep+v;
+        }else if (x == 30) {
+          document.getElementById('angka2').innerHTML = sep+sep+sep;
+        }else if (x == 39) {
+          document.getElementById('angka2').innerHTML = sep+sep+sep+i+sep;
+        }else if (x == 40) {
+          document.getElementById('angka2').innerHTML = sep+l;
+        }else if (x == 47) {
+          document.getElementById('angka2').innerHTML = sep+l+v+ii;
+        }else if (x == 50) {
+          document.getElementById('angka2').innerHTML = l;
+        }else if (x == 100) {
+          document.getElementById('angka2').innerHTML = c;
+        }else if (x == 500) {
+          document.getElementById('angka2').innerHTML = d;
+        }else if (x == 1000) {
+          document.getElementById('angka2').innerHTML = m;
+        }else {
+          document.getElementById('angka2').innerHTML = 'belum';
+        }
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+      function myPauseban() {
+        document.getElementById("bar").style.animationPlayState = "paused";
+
+        document.getElementById('simbol').style.color = 'rebeccapurple';
+        document.getElementById('ket').style.color = 'rebeccapurple';
+      }
+
+      function myPausejam() {
+        document.getElementById("bar").style.animationPlayState = "paused";
+
+        document.getElementById('ket').style.opacity = '0';
+
+        document.getElementById('angka2').style.color = 'rebeccapurple';
+      }
+
+      function myPauserom() {
+        document.getElementById("bar").style.animationPlayState = "paused";
+
+        document.getElementById('ket').style.opacity = '0';
+
+        document.getElementById('angka2').style.color = 'rebeccapurple';
+      }
+
+
+/* km kg */
+      function mykm() {
+        mus.play();
+
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        var kmhm = document.getElementById("kmhm");
+        var kmdam = document.getElementById("kmdam");
+        var kmm = document.getElementById("kmm");
+        var kmdm = document.getElementById("kmdm");
+        var kmcm = document.getElementById("kmcm");
+        var kmmm = document.getElementById("kmmm");
+
+        if (kmhm.style.display === "none") {
+          kmhm.style.display = "block";
+        } else {
+          kmhm.style.display = "block";
+        }
+
+        if (kmdam.style.display === "none") {
+          kmdam.style.display = "block";
+        } else {
+          kmdam.style.display = "block";
+        }
+
+        if (kmm.style.display === "none") {
+          kmm.style.display = "block";
+        } else {
+          kmm.style.display = "block";
+        }
+
+        if (kmdm.style.display === "none") {
+          kmdm.style.display = "block";
+        } else {
+          kmdm.style.display = "block";
+        }
+
+        if (kmcm.style.display === "none") {
+          kmcm.style.display = "block";
+        } else {
+          kmcm.style.display = "block";
+        }
+
+        if (kmmm.style.display === "none") {
+          kmmm.style.display = "block";
+        } else {
+          kmmm.style.display = "block";
+        }
+
+        var hmkm = document.getElementById("hmkm");
+        var hmdam = document.getElementById("hmdam");
+        var hmm = document.getElementById("hmm");
+        var hmdm = document.getElementById("hmdm");
+        var hmcm = document.getElementById("hmcm");
+        var hmmm = document.getElementById("hmmm");
+
+        if (hmkm.style.display === "none") {
+          hmkm.style.display = "none";
+        } else {
+          hmkm.style.display = "none";
+        }
+
+        if (hmdam.style.display === "none") {
+          hmdam.style.display = "none";
+        } else {
+          hmdam.style.display = "none";
+        }
+
+        if (hmm.style.display === "none") {
+          hmm.style.display = "none";
+        } else {
+          hmm.style.display = "none";
+        }
+
+        if (hmdm.style.display === "none") {
+          hmdm.style.display = "none";
+        } else {
+          hmdm.style.display = "none";
+        }
+
+        if (hmcm.style.display === "none") {
+          hmcm.style.display = "none";
+        } else {
+          hmcm.style.display = "none";
+        }
+
+        if (hmmm.style.display === "none") {
+          hmmm.style.display = "none";
+        } else {
+          hmmm.style.display = "none";
+        }
+
+        var damkm = document.getElementById("damkm");
+        var damhm = document.getElementById("damhm");
+        var damm = document.getElementById("damm");
+        var damdm = document.getElementById("damdm");
+        var damcm = document.getElementById("damcm");
+        var dammm = document.getElementById("dammm");
+
+        if (damkm.style.display === "none") {
+          damkm.style.display = "none";
+        } else {
+          damkm.style.display = "none";
+        }
+
+        if (damhm.style.display === "none") {
+          damhm.style.display = "none";
+        } else {
+          damhm.style.display = "none";
+        }
+
+        if (damm.style.display === "none") {
+          damm.style.display = "none";
+        } else {
+          damm.style.display = "none";
+        }
+
+        if (damdm.style.display === "none") {
+          damdm.style.display = "none";
+        } else {
+          damdm.style.display = "none";
+        }
+
+        if (damcm.style.display === "none") {
+          damcm.style.display = "none";
+        } else {
+          damcm.style.display = "none";
+        }
+
+        if (dammm.style.display === "none") {
+          dammm.style.display = "none";
+        } else {
+          dammm.style.display = "none";
+        }
+
+        var mkm = document.getElementById("mkm");
+        var mhm = document.getElementById("mhm");
+        var mdam = document.getElementById("mdam");
+        var mdm = document.getElementById("mdm");
+        var mcm = document.getElementById("mcm");
+        var mml = document.getElementById("mml");
+
+        if (mkm.style.display === "none") {
+          mkm.style.display = "none";
+        } else {
+          mkm.style.display = "none";
+        }
+
+        if (mhm.style.display === "none") {
+          mhm.style.display = "none";
+        } else {
+          mhm.style.display = "none";
+        }
+
+        if (mdam.style.display === "none") {
+          mdam.style.display = "none";
+        } else {
+          mdam.style.display = "none";
+        }
+
+        if (mdm.style.display === "none") {
+          mdm.style.display = "none";
+        } else {
+          mdm.style.display = "none";
+        }
+
+        if (mcm.style.display === "none") {
+          mcm.style.display = "none";
+        } else {
+          mcm.style.display = "none";
+        }
+
+        if (mml.style.display === "none") {
+          mml.style.display = "none";
+        } else {
+          mml.style.display = "none";
+        }
+
+        var dmkm = document.getElementById("dmkm");
+        var dmhm = document.getElementById("dmhm");
+        var dmdam = document.getElementById("dmdam");
+        var dmm = document.getElementById("dmm");
+        var dmcm = document.getElementById("dmcm");
+        var dmmm = document.getElementById("dmmm");
+
+        if (dmkm.style.display === "none") {
+          dmkm.style.display = "none";
+        } else {
+          dmkm.style.display = "none";
+        }
+
+        if (dmhm.style.display === "none") {
+          dmhm.style.display = "none";
+        } else {
+          dmhm.style.display = "none";
+        }
+
+        if (dmdam.style.display === "none") {
+          dmdam.style.display = "none";
+        } else {
+          dmdam.style.display = "none";
+        }
+
+        if (dmm.style.display === "none") {
+          dmm.style.display = "none";
+        } else {
+          dmm.style.display = "none";
+        }
+
+        if (dmcm.style.display === "none") {
+          dmcm.style.display = "none";
+        } else {
+          dmcm.style.display = "none";
+        }
+
+        if (dmmm.style.display === "none") {
+          dmmm.style.display = "none";
+        } else {
+          dmmm.style.display = "none";
+        }
+
+        var cmkm = document.getElementById("cmkm");
+        var cmhm = document.getElementById("cmhm");
+        var cmdam = document.getElementById("cmdam");
+        var cmdm = document.getElementById("cmdm");
+        var cmm = document.getElementById("cmm");
+        var cmmm = document.getElementById("cmmm");
+
+        if (cmkm.style.display === "none") {
+          cmkm.style.display = "none";
+        } else {
+          cmkm.style.display = "none";
+        }
+
+        if (cmhm.style.display === "none") {
+          cmhm.style.display = "none";
+        } else {
+          cmhm.style.display = "none";
+        }
+
+        if (cmdam.style.display === "none") {
+          cmdam.style.display = "none";
+        } else {
+          cmdam.style.display = "none";
+        }
+
+        if (cmdm.style.display === "none") {
+          cmdm.style.display = "none";
+        } else {
+          cmdm.style.display = "none";
+        }
+
+        if (cmm.style.display === "none") {
+          cmm.style.display = "none";
+        } else {
+          cmm.style.display = "none";
+        }
+
+        if (cmmm.style.display === "none") {
+          cmmm.style.display = "none";
+        } else {
+          cmmm.style.display = "none";
+        }
+
+        var mmkm = document.getElementById("mmkm");
+        var mmhm = document.getElementById("mmhm");
+        var mmdam = document.getElementById("mmdam");
+        var mmdm = document.getElementById("mmdm");
+        var mmcm = document.getElementById("mmcm");
+        var mmm = document.getElementById("mmm");
+
+        if (mmkm.style.display === "none") {
+          mmkm.style.display = "none";
+        } else {
+          mmkm.style.display = "none";
+        }
+
+        if (mmhm.style.display === "none") {
+          mmhm.style.display = "none";
+        } else {
+          mmhm.style.display = "none";
+        }
+
+        if (mmdam.style.display === "none") {
+          mmdam.style.display = "none";
+        } else {
+          mmdam.style.display = "none";
+        }
+
+        if (mmdm.style.display === "none") {
+          mmdm.style.display = "none";
+        } else {
+          mmdm.style.display = "none";
+        }
+
+        if (mmcm.style.display === "none") {
+          mmcm.style.display = "none";
+        } else {
+          mmcm.style.display = "none";
+        }
+
+        if (mmm.style.display === "none") {
+          mmm.style.display = "none";
+        } else {
+          mmm.style.display = "none";
+        }
+
+        document.getElementById('kmhm').style.color = "purple";
+        document.getElementById('kmdam').style.color = "purple";
+        document.getElementById('kmm').style.color = "purple";
+        document.getElementById('kmdm').style.color = "purple";
+        document.getElementById('kmcm').style.color = "purple";
+        document.getElementById('kmmm').style.color = "purple";
+      } 
+
+      function mykmhm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let satu = x * 10;
+
+        document.getElementById('satuan1').innerHTML = " km";
+        document.getElementById('jml').innerHTML = satu;
+        document.getElementById('satuan2').innerHTML = 'hm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mykmdam() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let dua = x * 100;
+
+        document.getElementById('satuan1').innerHTML = "km";
+        document.getElementById('jml').innerHTML = dua;
+        document.getElementById('satuan2').innerHTML = 'dam';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mykmm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let tiga = x * 1000;
+
+        document.getElementById('satuan1').innerHTML = "km";
+        document.getElementById('jml').innerHTML = tiga;
+        document.getElementById('satuan2').innerHTML = 'm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mykmdm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let empat = x * 10000;
+
+        document.getElementById('satuan1').innerHTML = "km";
+        document.getElementById('jml').innerHTML = empat;
+        document.getElementById('satuan2').innerHTML = 'dm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mykmcm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let lima = x * 100000;
+
+        document.getElementById('satuan1').innerHTML = "km";
+        document.getElementById('jml').innerHTML = lima;
+        document.getElementById('satuan2').innerHTML = 'cm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mykmmm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let enam = x * 1000000;
+
+        document.getElementById('satuan1').innerHTML = "km";
+        document.getElementById('jml').innerHTML = enam;
+        document.getElementById('satuan2').innerHTML = 'mm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+
+      function myhm() {
+        var kmhm = document.getElementById("kmhm");
+        var kmdam = document.getElementById("kmdam");
+        var kmm = document.getElementById("kmm");
+        var kmdm = document.getElementById("kmdm");
+        var kmcm = document.getElementById("kmcm");
+        var kmmm = document.getElementById("kmmm");
+
+        if (kmhm.style.display === "none") {
+          kmhm.style.display = "none";
+        } else {
+          kmhm.style.display = "none";
+        }
+
+        if (kmdam.style.display === "none") {
+          kmdam.style.display = "none";
+        } else {
+          kmdam.style.display = "none";
+        }
+
+        if (kmm.style.display === "none") {
+          kmm.style.display = "none";
+        } else {
+          kmm.style.display = "none";
+        }
+
+        if (kmdm.style.display === "none") {
+          kmdm.style.display = "none";
+        } else {
+          kmdm.style.display = "none";
+        }
+
+        if (kmcm.style.display === "none") {
+          kmcm.style.display = "none";
+        } else {
+          kmcm.style.display = "none";
+        }
+
+        if (kmmm.style.display === "none") {
+          kmmm.style.display = "none";
+        } else {
+          kmmm.style.display = "none";
+        }
+
+        var hmkm = document.getElementById("hmkm");
+        var hmdam = document.getElementById("hmdam");
+        var hmm = document.getElementById("hmm");
+        var hmdm = document.getElementById("hmdm");
+        var hmcm = document.getElementById("hmcm");
+        var hmmm = document.getElementById("hmmm");
+
+        if (hmkm.style.display === "none") {
+          hmkm.style.display = "block";
+        } else {
+          hmkm.style.display = "block";
+        }
+
+        if (hmdam.style.display === "none") {
+          hmdam.style.display = "block";
+        } else {
+          hmdam.style.display = "block";
+        }
+
+        if (hmm.style.display === "none") {
+          hmm.style.display = "block";
+        } else {
+          hmm.style.display = "block";
+        }
+
+        if (hmdm.style.display === "none") {
+          hmdm.style.display = "block";
+        } else {
+          hmdm.style.display = "block";
+        }
+
+        if (hmcm.style.display === "none") {
+          hmcm.style.display = "block";
+        } else {
+          hmcm.style.display = "block";
+        }
+
+        if (hmmm.style.display === "none") {
+          hmmm.style.display = "block";
+        } else {
+          hmmm.style.display = "block";
+        }
+
+        var damkm = document.getElementById("damkm");
+        var damhm = document.getElementById("damhm");
+        var damm = document.getElementById("damm");
+        var damdm = document.getElementById("damdm");
+        var damcm = document.getElementById("damcm");
+        var dammm = document.getElementById("dammm");
+
+        if (damkm.style.display === "none") {
+          damkm.style.display = "none";
+        } else {
+          damkm.style.display = "none";
+        }
+
+        if (damhm.style.display === "none") {
+          damhm.style.display = "none";
+        } else {
+          damhm.style.display = "none";
+        }
+
+        if (damm.style.display === "none") {
+          damm.style.display = "none";
+        } else {
+          damm.style.display = "none";
+        }
+
+        if (damdm.style.display === "none") {
+          damdm.style.display = "none";
+        } else {
+          damdm.style.display = "none";
+        }
+
+        if (damcm.style.display === "none") {
+          damcm.style.display = "none";
+        } else {
+          damcm.style.display = "none";
+        }
+
+        if (dammm.style.display === "none") {
+          dammm.style.display = "none";
+        } else {
+          dammm.style.display = "none";
+        }
+
+        var mkm = document.getElementById("mkm");
+        var mhm = document.getElementById("mhm");
+        var mdam = document.getElementById("mdam");
+        var mdm = document.getElementById("mdm");
+        var mcm = document.getElementById("mcm");
+        var mml = document.getElementById("mml");
+
+        if (mkm.style.display === "none") {
+          mkm.style.display = "none";
+        } else {
+          mkm.style.display = "none";
+        }
+
+        if (mhm.style.display === "none") {
+          mhm.style.display = "none";
+        } else {
+          mhm.style.display = "none";
+        }
+
+        if (mdam.style.display === "none") {
+          mdam.style.display = "none";
+        } else {
+          mdam.style.display = "none";
+        }
+
+        if (mdm.style.display === "none") {
+          mdm.style.display = "none";
+        } else {
+          mdm.style.display = "none";
+        }
+
+        if (mcm.style.display === "none") {
+          mcm.style.display = "none";
+        } else {
+          mcm.style.display = "none";
+        }
+
+        if (mml.style.display === "none") {
+          mml.style.display = "none";
+        } else {
+          mml.style.display = "none";
+        }
+
+        var dmkm = document.getElementById("dmkm");
+        var dmhm = document.getElementById("dmhm");
+        var dmdam = document.getElementById("dmdam");
+        var dmm = document.getElementById("dmm");
+        var dmcm = document.getElementById("dmcm");
+        var dmmm = document.getElementById("dmmm");
+
+        if (dmkm.style.display === "none") {
+          dmkm.style.display = "none";
+        } else {
+          dmkm.style.display = "none";
+        }
+
+        if (dmhm.style.display === "none") {
+          dmhm.style.display = "none";
+        } else {
+          dmhm.style.display = "none";
+        }
+
+        if (dmdam.style.display === "none") {
+          dmdam.style.display = "none";
+        } else {
+          dmdam.style.display = "none";
+        }
+
+        if (dmm.style.display === "none") {
+          dmm.style.display = "none";
+        } else {
+          dmm.style.display = "none";
+        }
+
+        if (dmcm.style.display === "none") {
+          dmcm.style.display = "none";
+        } else {
+          dmcm.style.display = "none";
+        }
+
+        if (dmmm.style.display === "none") {
+          dmmm.style.display = "none";
+        } else {
+          dmmm.style.display = "none";
+        }
+
+        var cmkm = document.getElementById("cmkm");
+        var cmhm = document.getElementById("cmhm");
+        var cmdam = document.getElementById("cmdam");
+        var cmdm = document.getElementById("cmdm");
+        var cmm = document.getElementById("cmm");
+        var cmmm = document.getElementById("cmmm");
+
+        if (cmkm.style.display === "none") {
+          cmkm.style.display = "none";
+        } else {
+          cmkm.style.display = "none";
+        }
+
+        if (cmhm.style.display === "none") {
+          cmhm.style.display = "none";
+        } else {
+          cmhm.style.display = "none";
+        }
+
+        if (cmdam.style.display === "none") {
+          cmdam.style.display = "none";
+        } else {
+          cmdam.style.display = "none";
+        }
+
+        if (cmdm.style.display === "none") {
+          cmdm.style.display = "none";
+        } else {
+          cmdm.style.display = "none";
+        }
+
+        if (cmm.style.display === "none") {
+          cmm.style.display = "none";
+        } else {
+          cmm.style.display = "none";
+        }
+
+        if (cmmm.style.display === "none") {
+          cmmm.style.display = "none";
+        } else {
+          cmmm.style.display = "none";
+        }
+
+        var mmkm = document.getElementById("mmkm");
+        var mmhm = document.getElementById("mmhm");
+        var mmdam = document.getElementById("mmdam");
+        var mmdm = document.getElementById("mmdm");
+        var mmcm = document.getElementById("mmcm");
+        var mmm = document.getElementById("mmm");
+
+        if (mmkm.style.display === "none") {
+          mmkm.style.display = "none";
+        } else {
+          mmkm.style.display = "none";
+        }
+
+        if (mmhm.style.display === "none") {
+          mmhm.style.display = "none";
+        } else {
+          mmhm.style.display = "none";
+        }
+
+        if (mmdam.style.display === "none") {
+          mmdam.style.display = "none";
+        } else {
+          mmdam.style.display = "none";
+        }
+
+        if (mmdm.style.display === "none") {
+          mmdm.style.display = "none";
+        } else {
+          mmdm.style.display = "none";
+        }
+
+        if (mmcm.style.display === "none") {
+          mmcm.style.display = "none";
+        } else {
+          mmcm.style.display = "none";
+        }
+
+        if (mmm.style.display === "none") {
+          mmm.style.display = "none";
+        } else {
+          mmm.style.display = "none";
+        }
+
+        document.getElementById('hmkm').style.color = "purple";
+        document.getElementById('hmdam').style.color = "purple";
+        document.getElementById('hmm').style.color = "purple";
+        document.getElementById('hmdm').style.color = "purple";
+        document.getElementById('hmcm').style.color = "purple";
+        document.getElementById('hmmm').style.color = "purple";
+      } 
+
+      function myhmkm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let satu = x / 10;
+
+        document.getElementById('satuan1').innerHTML = "hm";
+        document.getElementById('jml').innerHTML = satu;
+        document.getElementById('satuan2').innerHTML = 'km';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function myhmdam() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let satu = x * 10;
+
+        document.getElementById('satuan1').innerHTML = "hm";
+        document.getElementById('jml').innerHTML = satu;
+        document.getElementById('satuan2').innerHTML = 'm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function myhmm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let dua = x * 100;
+
+        document.getElementById('satuan1').innerHTML = "hm";
+        document.getElementById('jml').innerHTML = dua;
+        document.getElementById('satuan2').innerHTML = 'm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function myhmdm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let tiga = x * 1000;
+
+        document.getElementById('satuan1').innerHTML = "hm";
+        document.getElementById('jml').innerHTML = tiga;
+        document.getElementById('satuan2').innerHTML = 'dm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function myhmcm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let empat = x * 10000;
+
+        document.getElementById('satuan1').innerHTML = "hm";
+        document.getElementById('jml').innerHTML = empat;
+        document.getElementById('satuan2').innerHTML = 'cm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function myhmmm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let lima = x * 100000;
+
+        document.getElementById('satuan1').innerHTML = "hm";
+        document.getElementById('jml').innerHTML = lima;
+        document.getElementById('satuan2').innerHTML = 'mm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+
+      function mydam() {
+        var kmhm = document.getElementById("kmhm");
+        var kmdam = document.getElementById("kmdam");
+        var kmm = document.getElementById("kmm");
+        var kmdm = document.getElementById("kmdm");
+        var kmcm = document.getElementById("kmcm");
+        var kmmm = document.getElementById("kmmm");
+
+        if (kmhm.style.display === "none") {
+          kmhm.style.display = "none";
+        } else {
+          kmhm.style.display = "none";
+        }
+
+        if (kmdam.style.display === "none") {
+          kmdam.style.display = "none";
+        } else {
+          kmdam.style.display = "none";
+        }
+
+        if (kmm.style.display === "none") {
+          kmm.style.display = "none";
+        } else {
+          kmm.style.display = "none";
+        }
+
+        if (kmdm.style.display === "none") {
+          kmdm.style.display = "none";
+        } else {
+          kmdm.style.display = "none";
+        }
+
+        if (kmcm.style.display === "none") {
+          kmcm.style.display = "none";
+        } else {
+          kmcm.style.display = "none";
+        }
+
+        if (kmmm.style.display === "none") {
+          kmmm.style.display = "none";
+        } else {
+          kmmm.style.display = "none";
+        }
+
+        var hmkm = document.getElementById("hmkm");
+        var hmdam = document.getElementById("hmdam");
+        var hmm = document.getElementById("hmm");
+        var hmdm = document.getElementById("hmdm");
+        var hmcm = document.getElementById("hmcm");
+        var hmmm = document.getElementById("hmmm");
+
+        if (hmkm.style.display === "none") {
+          hmkm.style.display = "none";
+        } else {
+          hmkm.style.display = "none";
+        }
+
+        if (hmdam.style.display === "none") {
+          hmdam.style.display = "none";
+        } else {
+          hmdam.style.display = "none";
+        }
+
+        if (hmm.style.display === "none") {
+          hmm.style.display = "none";
+        } else {
+          hmm.style.display = "none";
+        }
+
+        if (hmdm.style.display === "none") {
+          hmdm.style.display = "none";
+        } else {
+          hmdm.style.display = "none";
+        }
+
+        if (hmcm.style.display === "none") {
+          hmcm.style.display = "none";
+        } else {
+          hmcm.style.display = "none";
+        }
+
+        if (hmmm.style.display === "none") {
+          hmmm.style.display = "none";
+        } else {
+          hmmm.style.display = "none";
+        }
+
+        var damkm = document.getElementById("damkm");
+        var damhm = document.getElementById("damhm");
+        var damm = document.getElementById("damm");
+        var damdm = document.getElementById("damdm");
+        var damcm = document.getElementById("damcm");
+        var dammm = document.getElementById("dammm");
+
+        if (damkm.style.display === "none") {
+          damkm.style.display = "block";
+        } else {
+          damkm.style.display = "block";
+        }
+
+        if (damhm.style.display === "none") {
+          damhm.style.display = "block";
+        } else {
+          damhm.style.display = "block";
+        }
+
+        if (damm.style.display === "none") {
+          damm.style.display = "block";
+        } else {
+          damm.style.display = "block";
+        }
+
+        if (damdm.style.display === "none") {
+          damdm.style.display = "block";
+        } else {
+          damdm.style.display = "block";
+        }
+
+        if (damcm.style.display === "none") {
+          damcm.style.display = "block";
+        } else {
+          damcm.style.display = "block";
+        }
+
+        if (dammm.style.display === "none") {
+          dammm.style.display = "block";
+        } else {
+          dammm.style.display = "block";
+        }
+
+        var mkm = document.getElementById("mkm");
+        var mhm = document.getElementById("mhm");
+        var mdam = document.getElementById("mdam");
+        var mdm = document.getElementById("mdm");
+        var mcm = document.getElementById("mcm");
+        var mml = document.getElementById("mml");
+
+        if (mkm.style.display === "none") {
+          mkm.style.display = "none";
+        } else {
+          mkm.style.display = "none";
+        }
+
+        if (mhm.style.display === "none") {
+          mhm.style.display = "none";
+        } else {
+          mhm.style.display = "none";
+        }
+
+        if (mdam.style.display === "none") {
+          mdam.style.display = "none";
+        } else {
+          mdam.style.display = "none";
+        }
+
+        if (mdm.style.display === "none") {
+          mdm.style.display = "none";
+        } else {
+          mdm.style.display = "none";
+        }
+
+        if (mcm.style.display === "none") {
+          mcm.style.display = "none";
+        } else {
+          mcm.style.display = "none";
+        }
+
+        if (mml.style.display === "none") {
+          mml.style.display = "none";
+        } else {
+          mml.style.display = "none";
+        }
+
+        var dmkm = document.getElementById("dmkm");
+        var dmhm = document.getElementById("dmhm");
+        var dmdam = document.getElementById("dmdam");
+        var dmm = document.getElementById("dmm");
+        var dmcm = document.getElementById("dmcm");
+        var dmmm = document.getElementById("dmmm");
+
+        if (dmkm.style.display === "none") {
+          dmkm.style.display = "none";
+        } else {
+          dmkm.style.display = "none";
+        }
+
+        if (dmhm.style.display === "none") {
+          dmhm.style.display = "none";
+        } else {
+          dmhm.style.display = "none";
+        }
+
+        if (dmdam.style.display === "none") {
+          dmdam.style.display = "none";
+        } else {
+          dmdam.style.display = "none";
+        }
+
+        if (dmm.style.display === "none") {
+          dmm.style.display = "none";
+        } else {
+          dmm.style.display = "none";
+        }
+
+        if (dmcm.style.display === "none") {
+          dmcm.style.display = "none";
+        } else {
+          dmcm.style.display = "none";
+        }
+
+        if (dmmm.style.display === "none") {
+          dmmm.style.display = "none";
+        } else {
+          dmmm.style.display = "none";
+        }
+
+        var cmkm = document.getElementById("cmkm");
+        var cmhm = document.getElementById("cmhm");
+        var cmdam = document.getElementById("cmdam");
+        var cmdm = document.getElementById("cmdm");
+        var cmm = document.getElementById("cmm");
+        var cmmm = document.getElementById("cmmm");
+
+        if (cmkm.style.display === "none") {
+          cmkm.style.display = "none";
+        } else {
+          cmkm.style.display = "none";
+        }
+
+        if (cmhm.style.display === "none") {
+          cmhm.style.display = "none";
+        } else {
+          cmhm.style.display = "none";
+        }
+
+        if (cmdam.style.display === "none") {
+          cmdam.style.display = "none";
+        } else {
+          cmdam.style.display = "none";
+        }
+
+        if (cmdm.style.display === "none") {
+          cmdm.style.display = "none";
+        } else {
+          cmdm.style.display = "none";
+        }
+
+        if (cmm.style.display === "none") {
+          cmm.style.display = "none";
+        } else {
+          cmm.style.display = "none";
+        }
+
+        if (cmmm.style.display === "none") {
+          cmmm.style.display = "none";
+        } else {
+          cmmm.style.display = "none";
+        }
+
+        var mmkm = document.getElementById("mmkm");
+        var mmhm = document.getElementById("mmhm");
+        var mmdam = document.getElementById("mmdam");
+        var mmdm = document.getElementById("mmdm");
+        var mmcm = document.getElementById("mmcm");
+        var mmm = document.getElementById("mmm");
+
+        if (mmkm.style.display === "none") {
+          mmkm.style.display = "none";
+        } else {
+          mmkm.style.display = "none";
+        }
+
+        if (mmhm.style.display === "none") {
+          mmhm.style.display = "none";
+        } else {
+          mmhm.style.display = "none";
+        }
+
+        if (mmdam.style.display === "none") {
+          mmdam.style.display = "none";
+        } else {
+          mmdam.style.display = "none";
+        }
+
+        if (mmdm.style.display === "none") {
+          mmdm.style.display = "none";
+        } else {
+          mmdm.style.display = "none";
+        }
+
+        if (mmcm.style.display === "none") {
+          mmcm.style.display = "none";
+        } else {
+          mmcm.style.display = "none";
+        }
+
+        if (mmm.style.display === "none") {
+          mmm.style.display = "none";
+        } else {
+          mmm.style.display = "none";
+        }
+
+        document.getElementById('damkm').style.color = "purple";
+        document.getElementById('damhm').style.color = "purple";
+        document.getElementById('damm').style.color = "purple";
+        document.getElementById('damdm').style.color = "purple";
+        document.getElementById('damcm').style.color = "purple";
+        document.getElementById('dammm').style.color = "purple";
+      } 
+
+      function mydamkm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let satu = x / 100;
+
+        document.getElementById('satuan1').innerHTML = "dam";
+        document.getElementById('jml').innerHTML = satu;
+        document.getElementById('satuan2').innerHTML = 'km';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mydamhm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let satu = x / 10;
+
+        document.getElementById('satuan1').innerHTML = "dam";
+        document.getElementById('jml').innerHTML = satu;
+        document.getElementById('satuan2').innerHTML = 'hm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mydamm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let dua = x * 10;
+
+        document.getElementById('satuan1').innerHTML = "dam";
+        document.getElementById('jml').innerHTML = dua;
+        document.getElementById('satuan2').innerHTML = 'm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mydamdm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let tiga = x * 100;
+
+        document.getElementById('satuan1').innerHTML = "dam";
+        document.getElementById('jml').innerHTML = tiga;
+        document.getElementById('satuan2').innerHTML = 'dm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mydamcm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let empat = x * 1000;
+
+        document.getElementById('satuan1').innerHTML = "dam";
+        document.getElementById('jml').innerHTML = empat;
+        document.getElementById('satuan2').innerHTML = 'cm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mydammm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let lima = x * 10000;
+
+        document.getElementById('satuan1').innerHTML = "dam";
+        document.getElementById('jml').innerHTML = lima;
+        document.getElementById('satuan2').innerHTML = 'mm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+
+      function mym() {
+        var kmhm = document.getElementById("kmhm");
+        var kmdam = document.getElementById("kmdam");
+        var kmm = document.getElementById("kmm");
+        var kmdm = document.getElementById("kmdm");
+        var kmcm = document.getElementById("kmcm");
+        var kmmm = document.getElementById("kmmm");
+
+        if (kmhm.style.display === "none") {
+          kmhm.style.display = "none";
+        } else {
+          kmhm.style.display = "none";
+        }
+
+        if (kmdam.style.display === "none") {
+          kmdam.style.display = "none";
+        } else {
+          kmdam.style.display = "none";
+        }
+
+        if (kmm.style.display === "none") {
+          kmm.style.display = "none";
+        } else {
+          kmm.style.display = "none";
+        }
+
+        if (kmdm.style.display === "none") {
+          kmdm.style.display = "none";
+        } else {
+          kmdm.style.display = "none";
+        }
+
+        if (kmcm.style.display === "none") {
+          kmcm.style.display = "none";
+        } else {
+          kmcm.style.display = "none";
+        }
+
+        if (kmmm.style.display === "none") {
+          kmmm.style.display = "none";
+        } else {
+          kmmm.style.display = "none";
+        }
+
+        var hmkm = document.getElementById("hmkm");
+        var hmdam = document.getElementById("hmdam");
+        var hmm = document.getElementById("hmm");
+        var hmdm = document.getElementById("hmdm");
+        var hmcm = document.getElementById("hmcm");
+        var hmmm = document.getElementById("hmmm");
+
+        if (hmkm.style.display === "none") {
+          hmkm.style.display = "none";
+        } else {
+          hmkm.style.display = "none";
+        }
+
+        if (hmdam.style.display === "none") {
+          hmdam.style.display = "none";
+        } else {
+          hmdam.style.display = "none";
+        }
+
+        if (hmm.style.display === "none") {
+          hmm.style.display = "none";
+        } else {
+          hmm.style.display = "none";
+        }
+
+        if (hmdm.style.display === "none") {
+          hmdm.style.display = "none";
+        } else {
+          hmdm.style.display = "none";
+        }
+
+        if (hmcm.style.display === "none") {
+          hmcm.style.display = "none";
+        } else {
+          hmcm.style.display = "none";
+        }
+
+        if (hmmm.style.display === "none") {
+          hmmm.style.display = "none";
+        } else {
+          hmmm.style.display = "none";
+        }
+
+        var damkm = document.getElementById("damkm");
+        var damhm = document.getElementById("damhm");
+        var damm = document.getElementById("damm");
+        var damdm = document.getElementById("damdm");
+        var damcm = document.getElementById("damcm");
+        var dammm = document.getElementById("dammm");
+
+        if (damkm.style.display === "none") {
+          damkm.style.display = "none";
+        } else {
+          damkm.style.display = "none";
+        }
+
+        if (damhm.style.display === "none") {
+          damhm.style.display = "none";
+        } else {
+          damhm.style.display = "none";
+        }
+
+        if (damm.style.display === "none") {
+          damm.style.display = "none";
+        } else {
+          damm.style.display = "none";
+        }
+
+        if (damdm.style.display === "none") {
+          damdm.style.display = "none";
+        } else {
+          damdm.style.display = "none";
+        }
+
+        if (damcm.style.display === "none") {
+          damcm.style.display = "none";
+        } else {
+          damcm.style.display = "none";
+        }
+
+        if (dammm.style.display === "none") {
+          dammm.style.display = "none";
+        } else {
+          dammm.style.display = "none";
+        }
+
+        var mkm = document.getElementById("mkm");
+        var mhm = document.getElementById("mhm");
+        var mdam = document.getElementById("mdam");
+        var mdm = document.getElementById("mdm");
+        var mcm = document.getElementById("mcm");
+        var mml = document.getElementById("mml");
+
+        if (mkm.style.display === "none") {
+          mkm.style.display = "block";
+        } else {
+          mkm.style.display = "block";
+        }
+
+        if (mhm.style.display === "none") {
+          mhm.style.display = "block";
+        } else {
+          mhm.style.display = "block";
+        }
+
+        if (mdam.style.display === "none") {
+          mdam.style.display = "block";
+        } else {
+          mdam.style.display = "block";
+        }
+
+        if (mdm.style.display === "none") {
+          mdm.style.display = "block";
+        } else {
+          mdm.style.display = "block";
+        }
+
+        if (mcm.style.display === "none") {
+          mcm.style.display = "block";
+        } else {
+          mcm.style.display = "block";
+        }
+
+        if (mml.style.display === "none") {
+          mml.style.display = "block";
+        } else {
+          mml.style.display = "block";
+        }
+
+        var dmkm = document.getElementById("dmkm");
+        var dmhm = document.getElementById("dmhm");
+        var dmdam = document.getElementById("dmdam");
+        var dmm = document.getElementById("dmm");
+        var dmcm = document.getElementById("dmcm");
+        var dmmm = document.getElementById("dmmm");
+
+        if (dmkm.style.display === "none") {
+          dmkm.style.display = "none";
+        } else {
+          dmkm.style.display = "none";
+        }
+
+        if (dmhm.style.display === "none") {
+          dmhm.style.display = "none";
+        } else {
+          dmhm.style.display = "none";
+        }
+
+        if (dmdam.style.display === "none") {
+          dmdam.style.display = "none";
+        } else {
+          dmdam.style.display = "none";
+        }
+
+        if (dmm.style.display === "none") {
+          dmm.style.display = "none";
+        } else {
+          dmm.style.display = "none";
+        }
+
+        if (dmcm.style.display === "none") {
+          dmcm.style.display = "none";
+        } else {
+          dmcm.style.display = "none";
+        }
+
+        if (dmmm.style.display === "none") {
+          dmmm.style.display = "none";
+        } else {
+          dmmm.style.display = "none";
+        }
+
+        var cmkm = document.getElementById("cmkm");
+        var cmhm = document.getElementById("cmhm");
+        var cmdam = document.getElementById("cmdam");
+        var cmdm = document.getElementById("cmdm");
+        var cmm = document.getElementById("cmm");
+        var cmmm = document.getElementById("cmmm");
+
+        if (cmkm.style.display === "none") {
+          cmkm.style.display = "none";
+        } else {
+          cmkm.style.display = "none";
+        }
+
+        if (cmhm.style.display === "none") {
+          cmhm.style.display = "none";
+        } else {
+          cmhm.style.display = "none";
+        }
+
+        if (cmdam.style.display === "none") {
+          cmdam.style.display = "none";
+        } else {
+          cmdam.style.display = "none";
+        }
+
+        if (cmdm.style.display === "none") {
+          cmdm.style.display = "none";
+        } else {
+          cmdm.style.display = "none";
+        }
+
+        if (cmm.style.display === "none") {
+          cmm.style.display = "none";
+        } else {
+          cmm.style.display = "none";
+        }
+
+        if (cmmm.style.display === "none") {
+          cmmm.style.display = "none";
+        } else {
+          cmmm.style.display = "none";
+        }
+
+        var mmkm = document.getElementById("mmkm");
+        var mmhm = document.getElementById("mmhm");
+        var mmdam = document.getElementById("mmdam");
+        var mmdm = document.getElementById("mmdm");
+        var mmcm = document.getElementById("mmcm");
+        var mmm = document.getElementById("mmm");
+
+        if (mmkm.style.display === "none") {
+          mmkm.style.display = "none";
+        } else {
+          mmkm.style.display = "none";
+        }
+
+        if (mmhm.style.display === "none") {
+          mmhm.style.display = "none";
+        } else {
+          mmhm.style.display = "none";
+        }
+
+        if (mmdam.style.display === "none") {
+          mmdam.style.display = "none";
+        } else {
+          mmdam.style.display = "none";
+        }
+
+        if (mmdm.style.display === "none") {
+          mmdm.style.display = "none";
+        } else {
+          mmdm.style.display = "none";
+        }
+
+        if (mmcm.style.display === "none") {
+          mmcm.style.display = "none";
+        } else {
+          mmcm.style.display = "none";
+        }
+
+        if (mmm.style.display === "none") {
+          mmm.style.display = "none";
+        } else {
+          mmm.style.display = "none";
+        }
+
+        document.getElementById('mhm').style.color = "purple";
+        document.getElementById('mdam').style.color = "purple";
+        document.getElementById('mkm').style.color = "purple";
+        document.getElementById('mdm').style.color = "purple";
+        document.getElementById('mcm').style.color = "purple";
+        document.getElementById('mml').style.color = "purple";
+      } 
+
+      function mymkm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let satu = x / 1000;
+
+        document.getElementById('satuan1').innerHTML = "m";
+        document.getElementById('jml').innerHTML = satu;
+        document.getElementById('satuan2').innerHTML = 'km';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mymdam() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let satu = x / 10;
+
+        document.getElementById('satuan1').innerHTML = "m";
+        document.getElementById('jml').innerHTML = satu;
+        document.getElementById('satuan2').innerHTML = 'dam';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mymhm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let dua = x / 100;
+
+        document.getElementById('satuan1').innerHTML = "m";
+        document.getElementById('jml').innerHTML = dua;
+        document.getElementById('satuan2').innerHTML = 'hm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mymdm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let tiga = x * 10;
+
+        document.getElementById('satuan1').innerHTML = "m";
+        document.getElementById('jml').innerHTML = tiga;
+        document.getElementById('satuan2').innerHTML = 'dm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mymcm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let empat = x * 100;
+
+        document.getElementById('satuan1').innerHTML = "m";
+        document.getElementById('jml').innerHTML = empat;
+        document.getElementById('satuan2').innerHTML = 'cm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mymml() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let lima = x * 1000;
+
+        document.getElementById('satuan1').innerHTML = "m";
+        document.getElementById('jml').innerHTML = lima;
+        document.getElementById('satuan2').innerHTML = 'mm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+
+      function mydm() {
+        var kmhm = document.getElementById("kmhm");
+        var kmdam = document.getElementById("kmdam");
+        var kmm = document.getElementById("kmm");
+        var kmdm = document.getElementById("kmdm");
+        var kmcm = document.getElementById("kmcm");
+        var kmmm = document.getElementById("kmmm");
+
+        if (kmhm.style.display === "none") {
+          kmhm.style.display = "none";
+        } else {
+          kmhm.style.display = "none";
+        }
+
+        if (kmdam.style.display === "none") {
+          kmdam.style.display = "none";
+        } else {
+          kmdam.style.display = "none";
+        }
+
+        if (kmm.style.display === "none") {
+          kmm.style.display = "none";
+        } else {
+          kmm.style.display = "none";
+        }
+
+        if (kmdm.style.display === "none") {
+          kmdm.style.display = "none";
+        } else {
+          kmdm.style.display = "none";
+        }
+
+        if (kmcm.style.display === "none") {
+          kmcm.style.display = "none";
+        } else {
+          kmcm.style.display = "none";
+        }
+
+        if (kmmm.style.display === "none") {
+          kmmm.style.display = "none";
+        } else {
+          kmmm.style.display = "none";
+        }
+
+        var hmkm = document.getElementById("hmkm");
+        var hmdam = document.getElementById("hmdam");
+        var hmm = document.getElementById("hmm");
+        var hmdm = document.getElementById("hmdm");
+        var hmcm = document.getElementById("hmcm");
+        var hmmm = document.getElementById("hmmm");
+
+        if (hmkm.style.display === "none") {
+          hmkm.style.display = "none";
+        } else {
+          hmkm.style.display = "none";
+        }
+
+        if (hmdam.style.display === "none") {
+          hmdam.style.display = "none";
+        } else {
+          hmdam.style.display = "none";
+        }
+
+        if (hmm.style.display === "none") {
+          hmm.style.display = "none";
+        } else {
+          hmm.style.display = "none";
+        }
+
+        if (hmdm.style.display === "none") {
+          hmdm.style.display = "none";
+        } else {
+          hmdm.style.display = "none";
+        }
+
+        if (hmcm.style.display === "none") {
+          hmcm.style.display = "none";
+        } else {
+          hmcm.style.display = "none";
+        }
+
+        if (hmmm.style.display === "none") {
+          hmmm.style.display = "none";
+        } else {
+          hmmm.style.display = "none";
+        }
+
+        var damkm = document.getElementById("damkm");
+        var damhm = document.getElementById("damhm");
+        var damm = document.getElementById("damm");
+        var damdm = document.getElementById("damdm");
+        var damcm = document.getElementById("damcm");
+        var dammm = document.getElementById("dammm");
+
+        if (damkm.style.display === "none") {
+          damkm.style.display = "none";
+        } else {
+          damkm.style.display = "none";
+        }
+
+        if (damhm.style.display === "none") {
+          damhm.style.display = "none";
+        } else {
+          damhm.style.display = "none";
+        }
+
+        if (damm.style.display === "none") {
+          damm.style.display = "none";
+        } else {
+          damm.style.display = "none";
+        }
+
+        if (damdm.style.display === "none") {
+          damdm.style.display = "none";
+        } else {
+          damdm.style.display = "none";
+        }
+
+        if (damcm.style.display === "none") {
+          damcm.style.display = "none";
+        } else {
+          damcm.style.display = "none";
+        }
+
+        if (dammm.style.display === "none") {
+          dammm.style.display = "none";
+        } else {
+          dammm.style.display = "none";
+        }
+
+        var mkm = document.getElementById("mkm");
+        var mhm = document.getElementById("mhm");
+        var mdam = document.getElementById("mdam");
+        var mdm = document.getElementById("mdm");
+        var mcm = document.getElementById("mcm");
+        var mml = document.getElementById("mml");
+
+        if (mkm.style.display === "none") {
+          mkm.style.display = "none";
+        } else {
+          mkm.style.display = "none";
+        }
+
+        if (mhm.style.display === "none") {
+          mhm.style.display = "none";
+        } else {
+          mhm.style.display = "none";
+        }
+
+        if (mdam.style.display === "none") {
+          mdam.style.display = "none";
+        } else {
+          mdam.style.display = "none";
+        }
+
+        if (mdm.style.display === "none") {
+          mdm.style.display = "none";
+        } else {
+          mdm.style.display = "none";
+        }
+
+        if (mcm.style.display === "none") {
+          mcm.style.display = "none";
+        } else {
+          mcm.style.display = "none";
+        }
+
+        if (mml.style.display === "none") {
+          mml.style.display = "none";
+        } else {
+          mml.style.display = "none";
+        }
+
+        var dmkm = document.getElementById("dmkm");
+        var dmhm = document.getElementById("dmhm");
+        var dmdam = document.getElementById("dmdam");
+        var dmm = document.getElementById("dmm");
+        var dmcm = document.getElementById("dmcm");
+        var dmmm = document.getElementById("dmmm");
+
+        if (dmkm.style.display === "none") {
+          dmkm.style.display = "block";
+        } else {
+          dmkm.style.display = "block";
+        }
+
+        if (dmhm.style.display === "none") {
+          dmhm.style.display = "block";
+        } else {
+          dmhm.style.display = "block";
+        }
+
+        if (dmdam.style.display === "none") {
+          dmdam.style.display = "block";
+        } else {
+          dmdam.style.display = "block";
+        }
+
+        if (dmm.style.display === "none") {
+          dmm.style.display = "block";
+        } else {
+          dmm.style.display = "block";
+        }
+
+        if (dmcm.style.display === "none") {
+          dmcm.style.display = "block";
+        } else {
+          dmcm.style.display = "block";
+        }
+
+        if (dmmm.style.display === "none") {
+          dmmm.style.display = "block";
+        } else {
+          dmmm.style.display = "block";
+        }
+
+        var cmkm = document.getElementById("cmkm");
+        var cmhm = document.getElementById("cmhm");
+        var cmdam = document.getElementById("cmdam");
+        var cmdm = document.getElementById("cmdm");
+        var cmm = document.getElementById("cmm");
+        var cmmm = document.getElementById("cmmm");
+
+        if (cmkm.style.display === "none") {
+          cmkm.style.display = "none";
+        } else {
+          cmkm.style.display = "none";
+        }
+
+        if (cmhm.style.display === "none") {
+          cmhm.style.display = "none";
+        } else {
+          cmhm.style.display = "none";
+        }
+
+        if (cmdam.style.display === "none") {
+          cmdam.style.display = "none";
+        } else {
+          cmdam.style.display = "none";
+        }
+
+        if (cmdm.style.display === "none") {
+          cmdm.style.display = "none";
+        } else {
+          cmdm.style.display = "none";
+        }
+
+        if (cmm.style.display === "none") {
+          cmm.style.display = "none";
+        } else {
+          cmm.style.display = "none";
+        }
+
+        if (cmmm.style.display === "none") {
+          cmmm.style.display = "none";
+        } else {
+          cmmm.style.display = "none";
+        }
+
+        var mmkm = document.getElementById("mmkm");
+        var mmhm = document.getElementById("mmhm");
+        var mmdam = document.getElementById("mmdam");
+        var mmdm = document.getElementById("mmdm");
+        var mmcm = document.getElementById("mmcm");
+        var mmm = document.getElementById("mmm");
+
+        if (mmkm.style.display === "none") {
+          mmkm.style.display = "none";
+        } else {
+          mmkm.style.display = "none";
+        }
+
+        if (mmhm.style.display === "none") {
+          mmhm.style.display = "none";
+        } else {
+          mmhm.style.display = "none";
+        }
+
+        if (mmdam.style.display === "none") {
+          mmdam.style.display = "none";
+        } else {
+          mmdam.style.display = "none";
+        }
+
+        if (mmdm.style.display === "none") {
+          mmdm.style.display = "none";
+        } else {
+          mmdm.style.display = "none";
+        }
+
+        if (mmcm.style.display === "none") {
+          mmcm.style.display = "none";
+        } else {
+          mmcm.style.display = "none";
+        }
+
+        if (mmm.style.display === "none") {
+          mmm.style.display = "none";
+        } else {
+          mmm.style.display = "none";
+        }
+
+        document.getElementById('dmhm').style.color = "purple";
+        document.getElementById('dmdam').style.color = "purple";
+        document.getElementById('dmm').style.color = "purple";
+        document.getElementById('dmkm').style.color = "purple";
+        document.getElementById('dmcm').style.color = "purple";
+        document.getElementById('dmmm').style.color = "purple";
+      } 
+
+      function mydmkm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let satu = x / 10000;
+
+        document.getElementById('satuan1').innerHTML = "dm";
+        document.getElementById('jml').innerHTML = satu;
+        document.getElementById('satuan2').innerHTML = 'km';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mydmdam() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let satu = x / 100;
+
+        document.getElementById('satuan1').innerHTML = "dm";
+        document.getElementById('jml').innerHTML = satu;
+        document.getElementById('satuan2').innerHTML = 'dam';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mydmm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let dua = x / 10;
+
+        document.getElementById('satuan1').innerHTML = "dm";
+        document.getElementById('jml').innerHTML = dua;
+        document.getElementById('satuan2').innerHTML = 'm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mydmhm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let tiga = x / 1000;
+
+        document.getElementById('satuan1').innerHTML = "dm";
+        document.getElementById('jml').innerHTML = tiga;
+        document.getElementById('satuan2').innerHTML = 'hm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mydmcm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let empat = x * 10;
+
+        document.getElementById('satuan1').innerHTML = "dm";
+        document.getElementById('jml').innerHTML = empat;
+        document.getElementById('satuan2').innerHTML = 'cm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mydmmm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let lima = x * 100;
+
+        document.getElementById('satuan1').innerHTML = "dm";
+        document.getElementById('jml').innerHTML = lima;
+        document.getElementById('satuan2').innerHTML = 'mm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+
+      function mycm() {
+        var kmhm = document.getElementById("kmhm");
+        var kmdam = document.getElementById("kmdam");
+        var kmm = document.getElementById("kmm");
+        var kmdm = document.getElementById("kmdm");
+        var kmcm = document.getElementById("kmcm");
+        var kmmm = document.getElementById("kmmm");
+
+        if (kmhm.style.display === "none") {
+          kmhm.style.display = "none";
+        } else {
+          kmhm.style.display = "none";
+        }
+
+        if (kmdam.style.display === "none") {
+          kmdam.style.display = "none";
+        } else {
+          kmdam.style.display = "none";
+        }
+
+        if (kmm.style.display === "none") {
+          kmm.style.display = "none";
+        } else {
+          kmm.style.display = "none";
+        }
+
+        if (kmdm.style.display === "none") {
+          kmdm.style.display = "none";
+        } else {
+          kmdm.style.display = "none";
+        }
+
+        if (kmcm.style.display === "none") {
+          kmcm.style.display = "none";
+        } else {
+          kmcm.style.display = "none";
+        }
+
+        if (kmmm.style.display === "none") {
+          kmmm.style.display = "none";
+        } else {
+          kmmm.style.display = "none";
+        }
+
+        var hmkm = document.getElementById("hmkm");
+        var hmdam = document.getElementById("hmdam");
+        var hmm = document.getElementById("hmm");
+        var hmdm = document.getElementById("hmdm");
+        var hmcm = document.getElementById("hmcm");
+        var hmmm = document.getElementById("hmmm");
+
+        if (hmkm.style.display === "none") {
+          hmkm.style.display = "none";
+        } else {
+          hmkm.style.display = "none";
+        }
+
+        if (hmdam.style.display === "none") {
+          hmdam.style.display = "none";
+        } else {
+          hmdam.style.display = "none";
+        }
+
+        if (hmm.style.display === "none") {
+          hmm.style.display = "none";
+        } else {
+          hmm.style.display = "none";
+        }
+
+        if (hmdm.style.display === "none") {
+          hmdm.style.display = "none";
+        } else {
+          hmdm.style.display = "none";
+        }
+
+        if (hmcm.style.display === "none") {
+          hmcm.style.display = "none";
+        } else {
+          hmcm.style.display = "none";
+        }
+
+        if (hmmm.style.display === "none") {
+          hmmm.style.display = "none";
+        } else {
+          hmmm.style.display = "none";
+        }
+
+        var damkm = document.getElementById("damkm");
+        var damhm = document.getElementById("damhm");
+        var damm = document.getElementById("damm");
+        var damdm = document.getElementById("damdm");
+        var damcm = document.getElementById("damcm");
+        var dammm = document.getElementById("dammm");
+
+        if (damkm.style.display === "none") {
+          damkm.style.display = "none";
+        } else {
+          damkm.style.display = "none";
+        }
+
+        if (damhm.style.display === "none") {
+          damhm.style.display = "none";
+        } else {
+          damhm.style.display = "none";
+        }
+
+        if (damm.style.display === "none") {
+          damm.style.display = "none";
+        } else {
+          damm.style.display = "none";
+        }
+
+        if (damdm.style.display === "none") {
+          damdm.style.display = "none";
+        } else {
+          damdm.style.display = "none";
+        }
+
+        if (damcm.style.display === "none") {
+          damcm.style.display = "none";
+        } else {
+          damcm.style.display = "none";
+        }
+
+        if (dammm.style.display === "none") {
+          dammm.style.display = "none";
+        } else {
+          dammm.style.display = "none";
+        }
+
+        var mkm = document.getElementById("mkm");
+        var mhm = document.getElementById("mhm");
+        var mdam = document.getElementById("mdam");
+        var mdm = document.getElementById("mdm");
+        var mcm = document.getElementById("mcm");
+        var mml = document.getElementById("mml");
+
+        if (mkm.style.display === "none") {
+          mkm.style.display = "none";
+        } else {
+          mkm.style.display = "none";
+        }
+
+        if (mhm.style.display === "none") {
+          mhm.style.display = "none";
+        } else {
+          mhm.style.display = "none";
+        }
+
+        if (mdam.style.display === "none") {
+          mdam.style.display = "none";
+        } else {
+          mdam.style.display = "none";
+        }
+
+        if (mdm.style.display === "none") {
+          mdm.style.display = "none";
+        } else {
+          mdm.style.display = "none";
+        }
+
+        if (mcm.style.display === "none") {
+          mcm.style.display = "none";
+        } else {
+          mcm.style.display = "none";
+        }
+
+        if (mml.style.display === "none") {
+          mml.style.display = "none";
+        } else {
+          mml.style.display = "none";
+        }
+
+        var dmkm = document.getElementById("dmkm");
+        var dmhm = document.getElementById("dmhm");
+        var dmdam = document.getElementById("dmdam");
+        var dmm = document.getElementById("dmm");
+        var dmcm = document.getElementById("dmcm");
+        var dmmm = document.getElementById("dmmm");
+
+        if (dmkm.style.display === "none") {
+          dmkm.style.display = "none";
+        } else {
+          dmkm.style.display = "none";
+        }
+
+        if (dmhm.style.display === "none") {
+          dmhm.style.display = "none";
+        } else {
+          dmhm.style.display = "none";
+        }
+
+        if (dmdam.style.display === "none") {
+          dmdam.style.display = "none";
+        } else {
+          dmdam.style.display = "none";
+        }
+
+        if (dmm.style.display === "none") {
+          dmm.style.display = "none";
+        } else {
+          dmm.style.display = "none";
+        }
+
+        if (dmcm.style.display === "none") {
+          dmcm.style.display = "none";
+        } else {
+          dmcm.style.display = "none";
+        }
+
+        if (dmmm.style.display === "none") {
+          dmmm.style.display = "none";
+        } else {
+          dmmm.style.display = "none";
+        }
+
+        var cmkm = document.getElementById("cmkm");
+        var cmhm = document.getElementById("cmhm");
+        var cmdam = document.getElementById("cmdam");
+        var cmdm = document.getElementById("cmdm");
+        var cmm = document.getElementById("cmm");
+        var cmmm = document.getElementById("cmmm");
+
+        if (cmkm.style.display === "none") {
+          cmkm.style.display = "block";
+        } else {
+          cmkm.style.display = "block";
+        }
+
+        if (cmhm.style.display === "none") {
+          cmhm.style.display = "block";
+        } else {
+          cmhm.style.display = "block";
+        }
+
+        if (cmdam.style.display === "none") {
+          cmdam.style.display = "block";
+        } else {
+          cmdam.style.display = "block";
+        }
+
+        if (cmdm.style.display === "none") {
+          cmdm.style.display = "block";
+        } else {
+          cmdm.style.display = "block";
+        }
+
+        if (cmm.style.display === "none") {
+          cmm.style.display = "block";
+        } else {
+          cmm.style.display = "block";
+        }
+
+        if (cmmm.style.display === "none") {
+          cmmm.style.display = "block";
+        } else {
+          cmmm.style.display = "block";
+        }
+
+        var mmkm = document.getElementById("mmkm");
+        var mmhm = document.getElementById("mmhm");
+        var mmdam = document.getElementById("mmdam");
+        var mmm = document.getElementById("mmm");
+        var mmdm = document.getElementById("mmdm");
+        var mmcm = document.getElementById("mmcm");
+
+        if (mmkm.style.display === "none") {
+          mmkm.style.display = "none";
+        } else {
+          mmkm.style.display = "none";
+        }
+
+        if (mmhm.style.display === "none") {
+          mmhm.style.display = "none";
+        } else {
+          mmhm.style.display = "none";
+        }
+
+        if (mmdam.style.display === "none") {
+          mmdam.style.display = "none";
+        } else {
+          mmdam.style.display = "none";
+        }
+
+        if (mmdm.style.display === "none") {
+          mmdm.style.display = "none";
+        } else {
+          mmdm.style.display = "none";
+        }
+
+        if (mmcm.style.display === "none") {
+          mmcm.style.display = "none";
+        } else {
+          mmcm.style.display = "none";
+        }
+
+        if (mmm.style.display === "none") {
+          mmm.style.display = "none";
+        } else {
+          mmm.style.display = "none";
+        }
+
+        document.getElementById('cmhm').style.color = "purple";
+        document.getElementById('cmdam').style.color = "purple";
+        document.getElementById('cmkm').style.color = "purple";
+        document.getElementById('cmdm').style.color = "purple";
+        document.getElementById('cmm').style.color = "purple";
+        document.getElementById('cmmm').style.color = "purple";
+      } 
+
+      function mycmkm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let satu = x / 100000;
+
+        document.getElementById('satuan1').innerHTML = "cm";
+        document.getElementById('jml').innerHTML = satu;
+        document.getElementById('satuan2').innerHTML = 'km';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mycmdam() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let satu = x / 1000;
+
+        document.getElementById('satuan1').innerHTML = "cm";
+        document.getElementById('jml').innerHTML = satu;
+        document.getElementById('satuan2').innerHTML = 'dam';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mycmm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let dua = x / 100;
+
+        document.getElementById('satuan1').innerHTML = "cm";
+        document.getElementById('jml').innerHTML = dua;
+        document.getElementById('satuan2').innerHTML = 'm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mycmdm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let tiga = x / 10;
+
+        document.getElementById('satuan1').innerHTML = "cm";
+        document.getElementById('jml').innerHTML = tiga;
+        document.getElementById('satuan2').innerHTML = 'dm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mycmhm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let empat = x / 10000;
+
+        document.getElementById('satuan1').innerHTML = "cm";
+        document.getElementById('jml').innerHTML = empat;
+        document.getElementById('satuan2').innerHTML = 'hm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mycmmm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let lima = x * 10;
+
+        document.getElementById('satuan1').innerHTML = "cm";
+        document.getElementById('jml').innerHTML = lima;
+        document.getElementById('satuan2').innerHTML = 'mm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+      function mymm() {
+        var kmhm = document.getElementById("kmhm");
+        var kmdam = document.getElementById("kmdam");
+        var kmm = document.getElementById("kmm");
+        var kmdm = document.getElementById("kmdm");
+        var kmcm = document.getElementById("kmcm");
+        var kmmm = document.getElementById("kmmm");
+
+        if (kmhm.style.display === "none") {
+          kmhm.style.display = "none";
+        } else {
+          kmhm.style.display = "none";
+        }
+
+        if (kmdam.style.display === "none") {
+          kmdam.style.display = "none";
+        } else {
+          kmdam.style.display = "none";
+        }
+
+        if (kmm.style.display === "none") {
+          kmm.style.display = "none";
+        } else {
+          kmm.style.display = "none";
+        }
+
+        if (kmdm.style.display === "none") {
+          kmdm.style.display = "none";
+        } else {
+          kmdm.style.display = "none";
+        }
+
+        if (kmcm.style.display === "none") {
+          kmcm.style.display = "none";
+        } else {
+          kmcm.style.display = "none";
+        }
+
+        if (kmmm.style.display === "none") {
+          kmmm.style.display = "none";
+        } else {
+          kmmm.style.display = "none";
+        }
+
+        var hmkm = document.getElementById("hmkm");
+        var hmdam = document.getElementById("hmdam");
+        var hmm = document.getElementById("hmm");
+        var hmdm = document.getElementById("hmdm");
+        var hmcm = document.getElementById("hmcm");
+        var hmmm = document.getElementById("hmmm");
+
+        if (hmkm.style.display === "none") {
+          hmkm.style.display = "none";
+        } else {
+          hmkm.style.display = "none";
+        }
+
+        if (hmdam.style.display === "none") {
+          hmdam.style.display = "none";
+        } else {
+          hmdam.style.display = "none";
+        }
+
+        if (hmm.style.display === "none") {
+          hmm.style.display = "none";
+        } else {
+          hmm.style.display = "none";
+        }
+
+        if (hmdm.style.display === "none") {
+          hmdm.style.display = "none";
+        } else {
+          hmdm.style.display = "none";
+        }
+
+        if (hmcm.style.display === "none") {
+          hmcm.style.display = "none";
+        } else {
+          hmcm.style.display = "none";
+        }
+
+        if (hmmm.style.display === "none") {
+          hmmm.style.display = "none";
+        } else {
+          hmmm.style.display = "none";
+        }
+
+        var damkm = document.getElementById("damkm");
+        var damhm = document.getElementById("damhm");
+        var damm = document.getElementById("damm");
+        var damdm = document.getElementById("damdm");
+        var damcm = document.getElementById("damcm");
+        var dammm = document.getElementById("dammm");
+
+        if (damkm.style.display === "none") {
+          damkm.style.display = "none";
+        } else {
+          damkm.style.display = "none";
+        }
+
+        if (damhm.style.display === "none") {
+          damhm.style.display = "none";
+        } else {
+          damhm.style.display = "none";
+        }
+
+        if (damm.style.display === "none") {
+          damm.style.display = "none";
+        } else {
+          damm.style.display = "none";
+        }
+
+        if (damdm.style.display === "none") {
+          damdm.style.display = "none";
+        } else {
+          damdm.style.display = "none";
+        }
+
+        if (damcm.style.display === "none") {
+          damcm.style.display = "none";
+        } else {
+          damcm.style.display = "none";
+        }
+
+        if (dammm.style.display === "none") {
+          dammm.style.display = "none";
+        } else {
+          dammm.style.display = "none";
+        }
+
+        var mkm = document.getElementById("mkm");
+        var mhm = document.getElementById("mhm");
+        var mdam = document.getElementById("mdam");
+        var mdm = document.getElementById("mdm");
+        var mcm = document.getElementById("mcm");
+        var mml = document.getElementById("mml");
+
+        if (mkm.style.display === "none") {
+          mkm.style.display = "none";
+        } else {
+          mkm.style.display = "none";
+        }
+
+        if (mhm.style.display === "none") {
+          mhm.style.display = "none";
+        } else {
+          mhm.style.display = "none";
+        }
+
+        if (mdam.style.display === "none") {
+          mdam.style.display = "none";
+        } else {
+          mdam.style.display = "none";
+        }
+
+        if (mdm.style.display === "none") {
+          mdm.style.display = "none";
+        } else {
+          mdm.style.display = "none";
+        }
+
+        if (mcm.style.display === "none") {
+          mcm.style.display = "none";
+        } else {
+          mcm.style.display = "none";
+        }
+
+        if (mml.style.display === "none") {
+          mml.style.display = "none";
+        } else {
+          mml.style.display = "none";
+        }
+
+        var dmkm = document.getElementById("dmkm");
+        var dmhm = document.getElementById("dmhm");
+        var dmdam = document.getElementById("dmdam");
+        var dmm = document.getElementById("dmm");
+        var dmcm = document.getElementById("dmcm");
+        var dmmm = document.getElementById("dmmm");
+
+        if (dmkm.style.display === "none") {
+          dmkm.style.display = "none";
+        } else {
+          dmkm.style.display = "none";
+        }
+
+        if (dmhm.style.display === "none") {
+          dmhm.style.display = "none";
+        } else {
+          dmhm.style.display = "none";
+        }
+
+        if (dmdam.style.display === "none") {
+          dmdam.style.display = "none";
+        } else {
+          dmdam.style.display = "none";
+        }
+
+        if (dmm.style.display === "none") {
+          dmm.style.display = "none";
+        } else {
+          dmm.style.display = "none";
+        }
+
+        if (dmcm.style.display === "none") {
+          dmcm.style.display = "none";
+        } else {
+          dmcm.style.display = "none";
+        }
+
+        if (dmmm.style.display === "none") {
+          dmmm.style.display = "none";
+        } else {
+          dmmm.style.display = "none";
+        }
+
+        var cmkm = document.getElementById("cmkm");
+        var cmhm = document.getElementById("cmhm");
+        var cmdam = document.getElementById("cmdam");
+        var cmdm = document.getElementById("cmdm");
+        var cmm = document.getElementById("cmm");
+        var cmmm = document.getElementById("cmmm");
+
+        if (cmkm.style.display === "none") {
+          cmkm.style.display = "none";
+        } else {
+          cmkm.style.display = "none";
+        }
+
+        if (cmhm.style.display === "none") {
+          cmhm.style.display = "none";
+        } else {
+          cmhm.style.display = "none";
+        }
+
+        if (cmdam.style.display === "none") {
+          cmdam.style.display = "none";
+        } else {
+          cmdam.style.display = "none";
+        }
+
+        if (cmdm.style.display === "none") {
+          cmdm.style.display = "none";
+        } else {
+          cmdm.style.display = "none";
+        }
+
+        if (cmm.style.display === "none") {
+          cmm.style.display = "none";
+        } else {
+          cmm.style.display = "none";
+        }
+
+        if (cmmm.style.display === "none") {
+          cmmm.style.display = "none";
+        } else {
+          cmmm.style.display = "none";
+        }
+
+        var mmkm = document.getElementById("mmkm");
+        var mmhm = document.getElementById("mmhm");
+        var mmdam = document.getElementById("mmdam");
+        var mmdm = document.getElementById("mmdm");
+        var mmcm = document.getElementById("mmcm");
+        var mmm = document.getElementById("mmm");
+
+        if (mmkm.style.display === "none") {
+          mmkm.style.display = "block";
+        } else {
+          mmkm.style.display = "block";
+        }
+
+        if (mmhm.style.display === "none") {
+          mmhm.style.display = "block";
+        } else {
+          mmhm.style.display = "block";
+        }
+
+        if (mmdam.style.display === "none") {
+          mmdam.style.display = "block";
+        } else {
+          mmdam.style.display = "block";
+        }
+
+        if (mmdm.style.display === "none") {
+          mmdm.style.display = "block";
+        } else {
+          mmdm.style.display = "block";
+        }
+
+        if (mmcm.style.display === "none") {
+          mmcm.style.display = "block";
+        } else {
+          mmcm.style.display = "block";
+        }
+
+        if (mmm.style.display === "none") {
+          mmm.style.display = "block";
+        } else {
+          mmm.style.display = "block";
+        }
+
+        document.getElementById('mmhm').style.color = "purple";
+        document.getElementById('mmdam').style.color = "purple";
+        document.getElementById('mmkm').style.color = "purple";
+        document.getElementById('mmdm').style.color = "purple";
+        document.getElementById('mmcm').style.color = "purple";
+        document.getElementById('mmm').style.color = "purple";
+      } 
+
+      function mymmkm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let satu = x / 1000000;
+
+        document.getElementById('satuan1').innerHTML = "mm";
+        document.getElementById('jml').innerHTML = satu;
+        document.getElementById('satuan2').innerHTML = 'km';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mymmdam() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let satu = x / 10000;
+
+        document.getElementById('satuan1').innerHTML = "mm";
+        document.getElementById('jml').innerHTML = satu;
+        document.getElementById('satuan2').innerHTML = 'dam';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mymmm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let dua = x / 1000;
+
+        document.getElementById('satuan1').innerHTML = "mm";
+        document.getElementById('jml').innerHTML = dua;
+        document.getElementById('satuan2').innerHTML = 'm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mymmdm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let tiga = x / 100;
+
+        document.getElementById('satuan1').innerHTML = "mm";
+        document.getElementById('jml').innerHTML = tiga;
+        document.getElementById('satuan2').innerHTML = 'dm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mymmcm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let empat = x / 10;
+
+        document.getElementById('satuan1').innerHTML = "mm";
+        document.getElementById('jml').innerHTML = empat;
+        document.getElementById('satuan2').innerHTML = 'cm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mymmhm() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let x = document.getElementById('angka1').innerHTML = getRndInteger(1, 100);
+
+        let lima = x / 100000;
+
+        document.getElementById('satuan1').innerHTML = "mm";
+        document.getElementById('jml').innerHTML = lima;
+        document.getElementById('satuan2').innerHTML = 'hm';
+        document.getElementById('off').style.opacity = "100%";
+        document.getElementById("jml").style.color = "white";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+      function myPausekmhm() {
+        document.getElementById("bar").style.animationPlayState = "paused";
+        document.getElementById("jml").style.color = "black";
+      }
+
+
+/* Bangun Datar */
+      function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+
+
+    // panjang
+      function mypanjang() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+        document.getElementById('kolombujur').style.display = "none";
+        document.getElementById('kolomsisi').style.display = "none";
+        document.getElementById('kolomsiku').style.display = "none";
+        document.getElementById('kolomlingkaran').style.display = "none";
+        document.getElementById('kolomkaki').style.display = "none";
+        document.getElementById('kolompanjang').style.display = "block";
+
+        document.getElementById('keliling').style.display = "block";
+        document.getElementById('luas').style.display = "block";
+        document.getElementById('keliling').style.color = "salmon";
+        document.getElementById('luas').style.color = "salmon";
+        document.getElementById('simput').style.color = "salmon";
+        document.getElementById('simlip').style.color = "salmon";
+        document.getElementById('persegi').style.opacity = "100%";
+        document.getElementById("ketkeliling").style.opacity = "0";
+        document.getElementById("jumlahkeliling").style.opacity = "0";
+        document.getElementById('bujur').style.opacity = "0";
+        document.getElementById("jmlkeliling").style.opacity = "0";   
+      } 
+
+      function mykelpan() {
+        document.getElementById("angka1datar").style.opacity = "100%";
+        document.getElementById("angka2datar").style.opacity = "100%";
+        document.getElementById("offdatar").style.display = "block";
+        document.getElementById("ketluas").style.opacity = "0";
+        document.getElementById("jumlahluas").style.opacity = "0";
+        document.getElementById("jmlluas").style.opacity = "0";
+        document.getElementById("jmlkeliling").style.color = "darkred";
+        document.getElementById("ketkeliling").style.opacity = "100%";
+        document.getElementById("jumlahkeliling").style.opacity = "100%";
+        document.getElementById("jmlkeliling").style.opacity = "0";
+
+        let waktu = document.getElementById('offdatar');
+
+        function mundur(menit) {
+          let interval = setInterval(function() {
+            if (menit >= 0) {
+              waktu.innerHTML = menit--;
+            }else{
+              clientInformation(waktu);
+              waktu.innerHTML ='waktu habis';
+            }
+          }, 1000);
+        }
+        mundur(9);
+
+        let x = document.getElementById('angka2datar').innerHTML = getRndInteger(10, 100);  
+        let y = document.getElementById('angka1datar').innerHTML = getRndInteger(1, 10);
+
+        let keliling = 2 * (x + y);
+
+        let timeid = setTimeout(() => {
+          document.getElementById('jmlkeliling').innerHTML = keliling;
+          document.getElementById("jmlkeliling").style.color = "darkred";
+          document.getElementById("ketkeliling").style.opacity = "100%";
+          document.getElementById("jumlahkeliling").style.opacity = "100%";
+          document.getElementById("jmlkeliling").style.opacity = "100%";
+        },  10000);
+
+        document.getElementById("ketkeliling").innerHTML = "Rumus: 2 (P + L)";
+        document.getElementById("jumlahkeliling").innerHTML = "Keliling = ";
+      }
+
+      function mylupan() { 
+        document.getElementById("angka1datar").style.opacity = "100%";
+        document.getElementById("angka2datar").style.opacity = "100%";
+        document.getElementById("offdatar").style.display = "block";
+        document.getElementById("ketkeliling").style.opacity = "0";
+        document.getElementById("jumlahkeliling").style.opacity = "0";
+        document.getElementById("jmlkeliling").style.opacity = "0";
+        document.getElementById("ketluas").style.opacity = "100%";
+        document.getElementById("jumlahluas").style.opacity = "100%";
+        document.getElementById("jmlluas").style.opacity = "0";
+
+        let waktu = document.getElementById('offdatar');
+
+        function mundur(menit) {
+          let interval = setInterval(function() {
+            if (menit >= 0) {
+              waktu.innerHTML = menit--;
+            }else{
+              clientInformation(waktu);
+              waktu.innerHTML ='waktu habis';
+            }
+          }, 1000);
+        }
+        mundur(9);
+
+        let x = document.getElementById('angka2datar').innerHTML = getRndInteger(10, 100);  
+        let y = document.getElementById('angka1datar').innerHTML = getRndInteger(1, 10);
+
+        let luas = x * y;
+
+        let timeid = setTimeout(() => {
+          document.getElementById('jmlluas').innerHTML = luas;
+          document.getElementById("jmlluas").style.color = "darkred";
+          document.getElementById("ketluas").style.opacity = "100%";
+          document.getElementById("jumlahluas").style.opacity = "100%";
+          document.getElementById("jmlluas").style.opacity = "100%";
+        },  10000);
+
+        document.getElementById("ketluas").innerHTML = "Rumus:  P x L";
+        document.getElementById("jumlahluas").innerHTML = "Luas = ";
+
+      }
+
+    // empat
+      function mybujur() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+        document.getElementById('kolombujur').style.display = "block";
+        document.getElementById('kolomsisi').style.display = "none";
+        document.getElementById('kolomsiku').style.display = "none";
+        document.getElementById('kolomlingkaran').style.display = "none";
+        document.getElementById('kolomkaki').style.display = "none";
+        document.getElementById('kolompanjang').style.display = "none";
+        document.getElementById('kelbuj').style.display = "block";
+        document.getElementById('lubuj').style.display = "block";
+
+        document.getElementById('kelbuj').style.color = "salmon";
+        document.getElementById('lubuj').style.color = "salmon";
+        document.getElementById('simput').style.color = "salmon";
+        document.getElementById('simlip').style.color = "salmon";
+        document.getElementById('persegi').style.display = "none";
+        document.getElementById('bujur').style.display = "block";
+      } 
+
+      function mykelbuj() {
+        document.getElementById("angka3datar").style.opacity = "100%";
+        document.getElementById("angka2datar").style.opacity = "0";
+        document.getElementById("angka1datar").style.opacity = "0";
+        document.getElementById("offdatar").style.display = "block";
+        document.getElementById("ketluas").style.opacity = "100";
+        document.getElementById("jumlahluas").style.opacity = "100%";
+        document.getElementById("jmlluas").style.opacity = "0";
+        document.getElementById("jmlkeliling").style.color = "darkred";
+        document.getElementById("ketkeliling").style.opacity = "0";
+        document.getElementById("jumlahkeliling").style.opacity = "0";
+        document.getElementById("jmlkeliling").style.opacity = "0";
+
+        let waktu = document.getElementById('offdatar');
+
+        function mundur(menit) {
+          let interval = setInterval(function() {
+            if (menit >= 0) {
+              waktu.innerHTML = menit--;
+            }else{
+              clientInformation(waktu);
+              waktu.innerHTML ='waktu habis';
+            }
+          }, 1000);
+        }
+        mundur(9);
+
+        let s = document.getElementById('angka3datar').innerHTML = getRndInteger(1, 10);
+
+        let keliling = 4 * s;
+
+        let timeid = setTimeout(() => {
+          document.getElementById('jmlluas').innerHTML = keliling;
+          document.getElementById("jmlluas").style.color = "darkred";
+          document.getElementById("jmlluas").style.opacity = "100%";
+        },  10000);
+
+        document.getElementById("ketluas").innerHTML = "Rumus: 4 x s";
+        document.getElementById("jumlahluas").innerHTML = "Keliling = ";
+      }
+
+      function mylubuj() { 
+        document.getElementById("angka3datar").style.opacity = "100%";
+        document.getElementById("angka2datar").style.opacity = "0";
+        document.getElementById("angka1datar").style.opacity = "0";
+        document.getElementById("offdatar").style.display = "block";
+        document.getElementById("ketkeliling").style.opacity = "0";
+        document.getElementById("jumlahkeliling").style.opacity = "0";
+        document.getElementById("jmlkeliling").style.opacity = "0";
+        document.getElementById("ketluas").style.opacity = "100%";
+        document.getElementById("jumlahluas").style.opacity = "100%";
+        document.getElementById("jmlluas").style.opacity = "0";
+
+        let waktu = document.getElementById('offdatar');
+
+        function mundur(menit) {
+          let interval = setInterval(function() {
+            if (menit >= 0) {
+              waktu.innerHTML = menit--;
+            }else{
+              clientInformation(waktu);
+              waktu.innerHTML ='waktu habis';
+            }
+          }, 1000);
+        }
+        mundur(9);
+
+        let s = document.getElementById('angka3datar').innerHTML = getRndInteger(1, 10);
+
+        let luas = s * s;
+
+        let timeid = setTimeout(() => {
+          document.getElementById('jmlluas').innerHTML = luas;
+          document.getElementById("jmlluas").style.color = "darkred";
+          document.getElementById("jmlluas").style.opacity = "100%";
+        },  10000);
+
+        document.getElementById("ketluas").innerHTML = "Rumus:  S X S";
+        document.getElementById("jumlahluas").innerHTML = "Luas = ";
+
+      }
+
+    // sama sisi
+
+      function mysisi() {
+        document.getElementById('kelsis').style.display = "block";
+        document.getElementById('lusis').style.display = "block";
+
+        document.getElementById('kelbuj').style.display = "none";
+        document.getElementById('lubuj').style.display = "none";
+        document.getElementById('keliling').style.display = "none";
+        document.getElementById('luas').style.display = "none";
+        document.getElementById('kelkak').style.display = "none";
+        document.getElementById('lukak').style.display = "none";
+        document.getElementById('kelling').style.display = "none";
+        document.getElementById('luling').style.display = "none"; 
+
+        document.getElementById('kelsis').style.color = "salmon";
+        document.getElementById('lusis').style.color = "salmon";
+
+        document.getElementById('persegi').style.opacity = "0";
+        document.getElementById('tkaki').style.opacity = "0";
+        document.getElementById('tsisi').style.opacity = "100%";
+        document.getElementById('tsiku').style.opacity = "0";
+        document.getElementById('bujur').style.opacity = "0";
+        document.getElementById('lingkar').style.opacity = "0";
+        document.getElementById("ketdatar").style.opacity = "0";
+        document.getElementById("jumlahdatar").style.opacity = "0";
+        document.getElementById("jmldatar").style.opacity = "0";
+        document.getElementById("angka1datar").style.opacity = "0";
+        document.getElementById("angka2datar").style.opacity = "0";
+        document.getElementById("angka3datar").style.opacity = "0";
+        document.getElementById("angka4datar").style.opacity = "0";
+      }
+
+      function mykelsis() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+        document.getElementById("angka4datar").style.opacity = "100%";
+        document.getElementById("angka3datar").style.opacity = "0";
+        document.getElementById("angka2datar").style.opacity = "0";
+        document.getElementById("angka1datar").style.opacity = "0";
+        document.getElementById("offdatar").style.display = "block";
+        document.getElementById("ketkeliling").style.opacity = "0";
+        document.getElementById("jumlahkeliling").style.opacity = "0";
+        document.getElementById("jmlkeliling").style.opacity = "0";
+        document.getElementById("ketluas").style.opacity = "0";
+        document.getElementById("jumlahluas").style.opacity = "0";
+        document.getElementById("jmlluas").style.opacity = "0";
+        document.getElementById("ketsisi").style.opacity = "100%";
+        document.getElementById("jumlahsisi").style.opacity = "100%";
+        document.getElementById('tsisi').style.opacity = "100%";
+
+        let waktu = document.getElementById('offdatar');
+
+        function mundur(menit) {
+          let interval = setInterval(function() {
+            if (menit >= 0) {
+              waktu.innerHTML = menit--;
+            }else{
+              clientInformation(waktu);
+              waktu.innerHTML ='waktu habis';
+            }
+          }, 1000);
+        }
+        mundur(9);
+
+        let s = document.getElementById('angka4datar').innerHTML = getRndInteger(1, 10);
+
+        let keliling = 3 * s;
+
+        let timeid = setTimeout(() => {
+          document.getElementById('jmlsisi').innerHTML = keliling;
+          document.getElementById("jmlsisi").style.opacity = "100%";
+          document.getElementById("jmlsisi").style.color = "red";
+        },  10000);
+
+        document.getElementById("ketsisi").innerHTML = "Rumus: 3 x s";
+        document.getElementById("jumlahsisi").innerHTML = "Keliling = ";
+      }
+
+      function mylusis() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let a = document.getElementById('angka2datar').innerHTML = getRndInteger(0, 10);
+
+        let t = document.getElementById('angka1datar').innerHTML = getRndInteger(1, 10);
+
+        let luas = 1 / 2 * ( a * t);
+
+        document.getElementById('jmldatar').innerHTML = luas;
+        document.getElementById("ketdatar").innerHTML = "Rumus:  1/2 x al x t";
+        document.getElementById("jumlahdatar").innerHTML = "Luas = ";
+        document.getElementById("jmldatar").style.color = "white";
+        document.getElementById("ketdatar").style.opacity = "100%";
+        document.getElementById('offdatar').style.opacity = "100%";
+        document.getElementById("jumlahdatar").style.opacity = "100%";
+        document.getElementById("jmldatar").style.opacity = "100%";
+        document.getElementById("angka1datar").style.opacity = "100%";
+        document.getElementById("angka2datar").style.opacity = "100%";
+        document.getElementById('tsiku').style.opacity = "100%";
+        document.getElementById('tsisi').style.opacity = "0";
+
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+      function mykaki() {
+        document.getElementById('kelsis').style.display = "none";
+        document.getElementById('lusis').style.display = "none";
+        document.getElementById('kelbuj').style.display = "none";
+        document.getElementById('lubuj').style.display = "none";
+        document.getElementById('keliling').style.display = "none";
+        document.getElementById('luas').style.display = "none";
+        document.getElementById('kelkak').style.display = "block";
+        document.getElementById('lukak').style.display = "block";
+        document.getElementById('kelling').style.display = "none";
+        document.getElementById('luling').style.display = "none"; 
+
+        document.getElementById('kelkak').style.color = "salmon";
+        document.getElementById('lukak').style.color = "salmon";
+
+        document.getElementById('persegi').style.opacity = "0";
+        document.getElementById('tkaki').style.opacity = "100%";
+        document.getElementById('tsisi').style.opacity = "0";
+        document.getElementById('tsiku').style.opacity = "0";
+        document.getElementById('bujur').style.opacity = "0";
+        document.getElementById('lingkar').style.opacity = "0";
+        document.getElementById("ketdatar").style.opacity = "0";
+        document.getElementById("jumlahdatar").style.opacity = "0";
+        document.getElementById("jmldatar").style.opacity = "0";
+        document.getElementById("angka1datar").style.opacity = "0";
+        document.getElementById("angka2datar").style.opacity = "0";
+      }
+      function mykelkak() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let a = document.getElementById('angka1datar').innerHTML = getRndInteger(1, 10);
+
+        let b = document.getElementById('angka2datar').innerHTML = getRndInteger(1, 10);
+
+        let keliling = (2 * a) + b;
+
+        document.getElementById('jmldatar').innerHTML = keliling;
+        document.getElementById("ketdatar").innerHTML = "Rumus: (2 x a) + b";
+        document.getElementById("jumlahdatar").innerHTML = "Keliling = ";
+        document.getElementById("jmldatar").style.color = "white";
+        document.getElementById("ketdatar").style.opacity = "100%";
+        document.getElementById('offdatar').style.opacity = "100%";
+        document.getElementById("jumlahdatar").style.opacity = "100%";
+        document.getElementById("jmldatar").style.opacity = "100%";
+        document.getElementById("angka1datar").style.opacity = "100%";
+        document.getElementById("angka2datar").style.opacity = "100%";
+        document.getElementById('tsiku').style.opacity = "0";
+        document.getElementById('tkaki').style.opacity = "100%";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function mylukak() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let a = document.getElementById('angka2datar').innerHTML = getRndInteger(0, 10);
+
+        let t = document.getElementById('angka1datar').innerHTML = getRndInteger(1, 10);
+
+        let luas = 1 / 2 * ( a * t);
+
+        document.getElementById('jmldatar').innerHTML = luas;
+        document.getElementById("ketdatar").innerHTML = "Rumus:  1/2 x al x t";
+        document.getElementById("jumlahdatar").innerHTML = "Luas = ";
+        document.getElementById("jmldatar").style.color = "white";
+        document.getElementById("ketdatar").style.opacity = "100%";
+        document.getElementById('offdatar').style.opacity = "100%";
+        document.getElementById("jumlahdatar").style.opacity = "100%";
+        document.getElementById("jmldatar").style.opacity = "100%";
+        document.getElementById("angka1datar").style.opacity = "100%";
+        document.getElementById("angka2datar").style.opacity = "100%";
+        document.getElementById('tsiku').style.opacity = "100%";
+        document.getElementById('tkaki').style.opacity = "0";
+
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+
+      function mylingkaran() {
+        document.getElementById('kelsis').style.display = "none";
+        document.getElementById('lusis').style.display = "none";
+        document.getElementById('kelbuj').style.display = "none";
+        document.getElementById('lubuj').style.display = "none";
+        document.getElementById('keliling').style.display = "none";
+        document.getElementById('luas').style.display = "none";
+        document.getElementById('kelkak').style.display = "none";
+        document.getElementById('lukak').style.display = "none";
+        document.getElementById('kelling').style.display = "block";
+        document.getElementById('luling').style.display = "block"; 
+
+        document.getElementById('kelling').style.color = "salmon";
+        document.getElementById('luling').style.color = "salmon";
+
+        document.getElementById('persegi').style.opacity = "0";
+        document.getElementById('tkaki').style.opacity = "0";
+        document.getElementById('tsisi').style.opacity = "0";
+        document.getElementById('tsiku').style.opacity = "0";
+        document.getElementById('bujur').style.opacity = "0";
+        document.getElementById('lingkar').style.opacity = "100%";
+        document.getElementById("ketdatar").style.opacity = "0";
+        document.getElementById("jumlahdatar").style.opacity = "0";
+        document.getElementById("jmldatar").style.opacity = "0";
+        document.getElementById("angka1datar").style.opacity = "0";
+        document.getElementById("angka2datar").style.opacity = "0";
+      }
+      function mykelling() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+
+        let r = document.getElementById('angka1datar').innerHTML = getRndInteger(1, 10);
+
+        let keliling = 2 * 3.14 * r;
+
+        document.getElementById('jmldatar').innerHTML = keliling;
+        document.getElementById("ketdatar").innerHTML = "Rumus: 2 x 3.14 x r";
+        document.getElementById("jumlahdatar").innerHTML = "Keliling = ";
+        document.getElementById("jmldatar").style.color = "white";
+        document.getElementById("ketdatar").style.opacity = "100%";
+        document.getElementById('offdatar').style.opacity = "100%";
+        document.getElementById("jumlahdatar").style.opacity = "100%";
+        document.getElementById("jmldatar").style.opacity = "100%";
+        document.getElementById("angka1datar").style.opacity = "100%";
+        document.getElementById("angka2datar").style.opacity = "0";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+      function myluling() {
+        mus.play();
+        document.getElementById("bar").style.animationPlayState = "running";
+
+        let r = document.getElementById('angka1datar').innerHTML = getRndInteger(0, 10);
+
+        let luas = 3.14 * (r * r);
+
+        document.getElementById('jmldatar').innerHTML = luas;
+        document.getElementById("ketdatar").innerHTML = "Rumus:  3.14 x (r x r)";
+        document.getElementById("jumlahdatar").innerHTML = "Luas = ";
+        document.getElementById("jmldatar").style.color = "white";
+        document.getElementById("ketdatar").style.opacity = "100%";
+        document.getElementById('offdatar').style.opacity = "100%";
+        document.getElementById("jumlahdatar").style.opacity = "100%";
+        document.getElementById("jmldatar").style.opacity = "100%";
+        document.getElementById("angka1datar").style.opacity = "100%";
+        document.getElementById("angka2datar").style.opacity = "0";
+
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
+      }
+
+
+      function myPausedatar() {
+        document.getElementById("bar").style.animationPlayState = "paused";
+        document.getElementById("jmldatar").style.color = "red";
+        document.getElementById("jumlahdatar").style.color = "red";
+      }
+
+
+/* Music  */
+      let a = document.getElementById("a");
+      let b = document.getElementById("b");
+      let c = document.getElementById("c");
+      let d = document.getElementById("d");
+      let e = document.getElementById("e");
+      let f = document.getElementById("f");
+
+      function mya() {
+        a.play();
+
+        b.pause();
+        c.pause();
+        d.pause();
+        e.pause();
+        f.pause();
+      }
+
+      function myb() {
+        b.play();
+
+        a.pause();
+        c.pause();
+        d.pause();
+        e.pause();
+        f.pause();
+      }
+
+      function myc() {
+        c.play();
+
+        a.pause();
+        b.pause();
+        d.pause();
+        e.pause();
+        f.pause();
+      }
+
+      function myd() {
+        d.play();
+
+        a.pause();
+        c.pause();
+        b.pause();
+        e.pause();
+        f.pause();
+      }
+
+      function mye() {
+        e.play();
+
+        a.pause();
+        c.pause();
+        d.pause();
+        b.pause();
+        f.pause();
+      }
+
+
+/* Back */
+      function myback() {
+        document.getElementById('menuutama').style.display = "block";
+        document.getElementById('datar').style.display = "none";
+        document.getElementById('tambah').style.display = "none";
+        document.getElementById('jam').style.display = "none";
+        document.getElementById('kmkg').style.display = "none";
+        document.getElementById('pecahan').style.display = "none";
+        document.getElementById('musik').style.display = "none";
+      }
+
+    </script>
+  </body> 
+
+  </html>
+
+
+
